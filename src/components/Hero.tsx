@@ -27,9 +27,9 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
         >
-          <h1 className="font-display text-7xl md:text-9xl text-white font-bold mb-10 tracking-tight leading-[0.85]">
+          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-white font-bold mb-8 tracking-tight leading-tight">
             {t('hero.title')}
-            <span className="block italic font-light text-white/80 mt-4 text-4xl md:text-6xl">{t('hero.subtitle')}</span>
+            <span className="block italic font-light text-white/80 mt-4 text-2xl md:text-4xl">{t('hero.subtitle')}</span>
           </h1>
         </motion.div>
 
