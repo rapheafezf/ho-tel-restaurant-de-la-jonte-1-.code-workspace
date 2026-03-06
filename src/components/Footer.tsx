@@ -2,7 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
-import { Facebook, Instagram } from 'lucide-react';
+import { Facebook } from 'lucide-react';
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -25,11 +25,8 @@ export default function Footer() {
               Depuis 1954, notre famille vous accueille au cœur des Gorges de la Jonte pour une expérience authentique et naturelle.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-gold-500 hover:text-white hover:border-gold-500 transition-colors">
+              <a href="https://www.facebook.com/hotelrestaurantlesdouzes" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-gold-500 hover:text-white hover:border-gold-500 transition-colors">
                 <Facebook className="w-4 h-4" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-gold-500 hover:text-white hover:border-gold-500 transition-colors">
-                <Instagram className="w-4 h-4" />
               </a>
             </div>
           </div>
