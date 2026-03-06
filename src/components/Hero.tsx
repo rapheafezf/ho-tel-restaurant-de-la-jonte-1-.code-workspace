@@ -25,9 +25,6 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
         >
-          <span className="inline-block text-gold-400 font-bold tracking-[0.4em] uppercase text-[10px] mb-8">
-            Nature Chic & Cuisine de Terroir
-          </span>
           <h1 className="font-display text-7xl md:text-9xl text-white font-bold mb-10 tracking-tight leading-[0.85]">
             {t('hero.title')}
             <span className="block italic font-light text-white/80 mt-4 text-4xl md:text-6xl">{t('hero.subtitle')}</span>

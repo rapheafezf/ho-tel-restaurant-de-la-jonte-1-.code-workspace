@@ -35,8 +35,10 @@ export default function Navbar() {
   ];
 
   const languages = [
-    { code: 'fr', name: 'Français' },
-    { code: 'en', name: 'English' },
+    { code: 'fr', name: '🇫🇷 Français' },
+    { code: 'en', name: '🇬🇧 English' },
+    { code: 'es', name: '🇪🇸 Español' },
+    { code: 'de', name: '🇩🇪 Deutsch' },
   ];
 
   const isTransparentPage = location.pathname === '/' || location.pathname === '/chambres';
@@ -50,7 +52,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 flex-1">
             <Link
               to="/"
               className={`font-display text-2xl font-bold tracking-[0.1em] transition-colors duration-500 uppercase ${isScrolled || !isTransparentPage ? 'text-forest-950' : 'text-white'
