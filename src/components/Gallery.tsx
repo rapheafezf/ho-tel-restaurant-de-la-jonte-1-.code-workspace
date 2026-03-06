@@ -2,12 +2,12 @@ import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 
 const images = [
-  { url: 'https://image.jimcdn.com/cdn-cgi/image/width=2048%2Cheight=2048%2Cfit=contain%2Cformat=jpg%2C/app/cms/storage/image/path/s094131847179d8bd/image/ia174abe91727c5d4/version/1679995217/image.jpg', className: 'md:col-span-2 md:row-span-2' },
-  { url: 'https://image.jimcdn.com/app/cms/image/transf/dimension=2048x2048:format=jpg:rotate=90/path/s094131847179d8bd/image/i5fa3bc2791ddb999/version/1585560665/image.jpg', className: '' },
-  { url: 'https://image.jimcdn.com/cdn-cgi/image/width=2048%2Cheight=2048%2Cfit=contain%2Cformat=jpg%2C/app/cms/storage/image/path/s094131847179d8bd/image/id0b7817ce0126528/version/1585560665/image.jpg', className: '' },
-  { url: 'https://image.jimcdn.com/cdn-cgi/image/width=1024%2Cheight=2048%2Cfit=contain%2Cformat=jpg%2C/app/cms/storage/image/path/s094131847179d8bd/image/if2d810fff414b826/version/1585560665/image.jpg', className: '' },
-  { url: 'https://image.jimcdn.com/cdn-cgi/image/width=1024%2Cheight=2048%2Cfit=contain%2Cformat=jpg%2C/app/cms/storage/image/path/s094131847179d8bd/image/i8b83ffe3d680ef30/version/1585560665/image.jpg', className: '' },
-  { url: 'https://image.jimcdn.com/cdn-cgi/image/width=328%2Cheight=10000%2Cfit=contain%2Cformat=jpg%2C/app/cms/storage/image/path/s094131847179d8bd/image/i4a3a8fceb42abbfa/version/1747124616/image.jpg', className: 'md:col-span-2' },
+  { url: 'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=1200', className: 'md:col-span-2 md:row-span-2' },
+  { url: 'https://images.unsplash.com/photo-1551882547-ff43c33f7c45?auto=format&fit=crop&q=80&w=1200', className: '' },
+  { url: 'https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&q=80&w=1200', className: '' },
+  { url: 'https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&q=80&w=1200', className: '' },
+  { url: 'https://images.unsplash.com/photo-1433086177607-45e073dc4a3d?auto=format&fit=crop&q=80&w=1200', className: '' },
+  { url: 'https://images.unsplash.com/photo-1464093515883-ec948246abc7?auto=format&fit=crop&q=80&w=1200', className: 'md:col-span-2' },
 ];
 
 export default function Gallery() {

@@ -1,77 +1,71 @@
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 export default function About() {
   const { t } = useTranslation();
 
-  // Define features array outside the component or memoize it if it's dynamic
-  const features = (t('about.features', { returnObjects: true }) as string[]);
-
   return (
-    <section id="hotel" className="py-24 md:py-32 bg-white">
+    <section className="py-32 bg-beige-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
 
           {/* Image Side */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
             className="relative"
           >
-            <div className="aspect-[4/5] rounded-sm overflow-hidden">
+            <div className="aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl">
               <img
-                src="https://image.jimcdn.com/cdn-cgi/image/width=1280%2Cheight=1280%2Cfit=cover%2Cformat=jpg%2C/app/cms/storage/image/path/s094131847179d8bd/image/ifa196414fd8a9947/version/1585579973/image.jpg"
-                alt="Notre Hôtel"
-                className="w-full h-full object-cover"
+                src="https://u.jimcdn.com/cms/o/s094131847179d8bd/img/ia9cb8df10e5d0891/1431679093/std/image.jpg"
+                alt="Chambre de l'Hôtel Restaurant de la Jonte"
+                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
               />
             </div>
-            {/* Decorative Element */}
-            <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-gold-500/10 -z-10" />
+            {/* Decorative Label */}
+            <div className="absolute top-12 -left-8 bg-gold-500 p-8 rounded-2xl shadow-xl hidden md:block">
+              <span className="block text-4xl font-display font-bold text-white leading-none tracking-tighter">25</span>
+              <span className="text-[10px] uppercase tracking-[0.2em] text-white/80 font-bold">Chambres</span>
+            </div>
           </motion.div>
 
           {/* Content Side */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           >
-            <span className="text-gold-500 font-medium tracking-widest uppercase text-sm mb-4 block">
-              {t('about.badge')}
+            <span className="text-gold-500 font-bold tracking-[0.3em] uppercase text-xs mb-6 block">
+              Une Maison de Famille
             </span>
-            <h2 className="font-serif text-4xl md:text-5xl text-zinc-900 mb-8 leading-tight">
-              {t('about.title').split(' ').slice(0, -1).join(' ')} <span className="italic font-light">{t('about.title').split(' ').slice(-1)}</span>
+            <h2 className="font-display text-5xl md:text-7xl text-forest-950 mb-10 leading-[0.9] tracking-tighter font-bold">
+              Bienvenue <span className="italic font-light block mt-4 text-forest-950/40">aux Douzes</span>
             </h2>
 
-            <div className="space-y-6 text-zinc-600 font-light leading-relaxed">
+            <div className="space-y-8 text-forest-900/70 font-light leading-relaxed text-xl">
               <p>
-                {t('about.p1')}
+                Depuis 1954, la famille Vergely vous accueille dans un cadre naturel préservé, au bord de la Jonte.
               </p>
               <p>
-                {t('about.p2')}
+                Notre établissement allie confort moderne et authenticité régionale pour vous offrir une parenthèse de calme absolu.
               </p>
             </div>
 
-            <ul className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {features.map((feature, index) => (
-                <li key={index} className="flex items-center space-x-3 text-zinc-700">
-                  <div className="w-1.5 h-1.5 bg-gold-500 rounded-full" />
-                  <span className="text-sm">{feature}</span>
-                </li>
-              ))}
-            </ul>
-
-            <div className="mt-12 flex items-center space-x-12 border-t border-zinc-100 pt-8">
-              <div>
-                <span className="block text-2xl font-serif text-zinc-900">1954</span>
-                <span className="text-xs uppercase tracking-widest text-zinc-400">{t('about.stats.creation')}</span>
+            <div className="mt-16 flex flex-col sm:flex-row items-center gap-8 border-t border-forest-900/10 pt-10">
+              <div className="flex items-center gap-4">
+                <span className="block text-4xl font-display font-bold text-gold-500 tracking-tighter leading-none">1954</span>
+                <span className="text-[9px] w-20 leading-tight uppercase tracking-widest text-forest-950/40 font-bold">Année de Fondation</span>
               </div>
-              <div>
-                <span className="block text-2xl font-serif text-zinc-900">25</span>
-                <span className="text-xs uppercase tracking-widest text-zinc-400">{t('about.stats.rooms')}</span>
-              </div>
+              <Link
+                to="/chambres"
+                className="btn-primary py-4 px-10"
+              >
+                Découvrir l'Hôtel
+              </Link>
             </div>
           </motion.div>
 

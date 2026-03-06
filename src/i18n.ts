@@ -7,356 +7,398 @@ const resources = {
         translation: {
             nav: {
                 home: 'Accueil',
-                hotel: "L'Hôtel",
-                restaurant: 'Le Restaurant',
-                region: 'La Région',
-                contact: 'Contact',
-                reserve: 'Réserver',
+                hotel: 'L\'Hôtel',
+                rooms: 'Chambres',
+                restaurant: 'Restaurant',
+                region: 'Région & Activités',
+                offers: 'Offres & Tarifs',
+                contact: 'Infos Pratiques',
+                reserve: 'Réservez',
             },
             hero: {
-                title: 'Hôtel Restaurant',
-                subtitle: 'de la Jonte',
-                welcome: 'Bienvenue aux Douzes. Depuis 1954, la famille Vergely vous accueille en plein cœur des Gorges de la Jonte.',
-                cta: 'Réserver une table',
-                discover: 'Découvrir',
+                title: 'Hôtel Restaurant de la Jonte',
+                subtitle: 'Séjournez au cœur des Gorges de la Jonte',
+                welcome: 'Découvrez la nature, la détente et les saveurs régionales dans un cadre chaleureux.',
+                cta_room: 'Réserver',
+                cta_table: 'Découvrir l\'hôtel',
             },
-            about: {
-                badge: 'Séjournez aux Douzes',
+            home: {
+                presentation: {
+                    title: 'Bienvenue dans votre parenthèse nature',
+                    text: 'Depuis 1954, la famille Vergely vous accueille dans un cadre naturel exceptionnel au cœur des Gorges de la Jonte. Que vous soyez amateur de randonnée, passionné de nature ou à la recherche d\'un séjour en famille, l\'Hôtel Restaurant de la Jonte est votre camp de base idéal. Profitez de nos vues panoramiques, de notre piscine extérieure et de notre cuisine régionale authentique.',
+                },
+                highlights: {
+                    pool: 'Piscine panoramique',
+                    restaurant: 'Restaurant régional',
+                    rooms: 'Chambres confortables',
+                    setting: 'Cadre exceptionnel',
+                    parking: 'Parking gratuit',
+                    wifi: 'Wi-Fi gratuit'
+                },
+                rooms_preview: {
+                    title: 'Repos & Confort',
+                    standard: { name: 'Chambre Standard', desc: 'Douillette et essentielle. Parfaite pour un court séjour.' },
+                    superior: { name: 'Chambre avec Balcon', desc: 'Réveillez-vous au son de la rivière.' },
+                    family: { name: 'Chambre Familiale', desc: 'Confort spacieux pour toute la famille.' },
+                    cta: 'Voir toutes les chambres',
+                    view_room: 'Voir la chambre'
+                },
+                restaurant_teaser: {
+                    title: 'Goûtez le Terroir',
+                    text: 'Découvrez les saveurs authentiques de notre région. Notre chef prépare des plats généreux mettant en valeur les produits locaux, de l\'Aligot traditionnel aux Tripoux. Dégustez votre repas dans notre salle à manger ou sur la terrasse.',
+                    cta: 'Découvrir nos menus'
+                },
+                region_teaser: {
+                    title: 'Explorez les Gorges',
+                    text: 'Des sentiers de randonnée, des villages pittoresques et des points de vue à couper le souffle vous attendent à quelques pas. Laissez la nature vous inspirer.',
+                    cta: 'Explorer les activités'
+                },
+                reviews: {
+                    title: 'Ce que disent nos hôtes',
+                    r1: '"Un cadre magnifique et un accueil chaleureux. La piscine après une rando est un rêve !" - Sarah M.',
+                    r2: '"Excellente cuisine régionale et des chambres très propres et confortables. Nous reviendrons." - Jean-Luc P.'
+                },
+                direct_booking: {
+                    title: 'Garantie du Meilleur Tarif',
+                    text: 'Réservez directement sur notre site pour obtenir les meilleurs prix, des conditions flexibles et un contact direct avec l\'équipe.',
+                    cta: 'Réserver maintenant'
+                }
+            },
+            hotel_page: {
                 title: 'Notre Hôtel',
-                p1: 'Bénéficiant d\'un accès direct à la rivière "La Jonte", notre hôtel vous offre un cadre exceptionnel pour vous ressourcer au cœur du Parc National des Cévennes.',
-                p2: 'Nous disposons de 25 chambres équipées (téléphone, télévision écran plat, coffre-fort, salle de bains privative et balcon privé). L\'établissement est accessible aux personnes à mobilité réduite (PMR) et les animaux de compagnie sont admis.',
-                features: [
-                    'Piscine extérieure en saison & Grande terrasse',
-                    'Espace détente (salon, billard)',
-                    'Wifi gratuit',
-                    'Parking privé & Garage à vélos',
-                ],
-                stats: {
-                    creation: 'Création',
-                    rooms: 'Chambres',
+                history_title: 'Notre Histoire',
+                history_text: 'Depuis 1954, la famille Vergely accueille ses hôtes à bras ouverts. Notre atmosphère familiale permet à chacun de se sentir chez soi au cœur de la nature.',
+                amenities_title: 'Nos Prestations',
+                amenities: {
+                    pool: 'Piscine extérieure en saison & grande terrasse',
+                    wifi: 'Accès Wi-Fi gratuit dans tout l\'hôtel',
+                    parking: 'Parking privé sur place & garage à vélos',
+                    pets: 'Animaux acceptés (nous contacter)',
+                    bar: 'Bar cosy et salon de détente'
                 },
-            },
-            gallery: {
-                badge: 'Galerie',
-                title: 'L\'expérience en images',
-            },
-            menu: {
-                badge: 'Gastronomie Locale',
-                title: 'Notre Restaurant',
-                description: 'Maxime, Gilles, Cyril et leur équipe sont garants d\'une tradition de terroir. Nous servons une cuisine typiquement régionale où vous pourrez apprécier les mets les plus connus de la gastronomie locale.',
-                tabs: {
-                    specialties: 'Spécialités',
-                    traditional: 'Plats Traditionnels',
+                pool_area: {
+                    title: 'L\'Espace Piscine',
+                    text: 'Détendez-vous dans notre piscine extérieure, entourée de chaises longues. Après une journée de découverte, piquez une tête tout en admirant les falaises majestueuses des Gorges de la Jonte.'
                 },
-                items: {
-                    charcuterie: { name: 'Charcuterie Locale', desc: 'Sélection de charcuteries de nos producteurs partenaires' },
-                    muffin: { name: 'Muffin au Roquefort', desc: 'Spécialité maison au célèbre fromage de la région' },
-                    aligot: { name: 'Aligot', desc: 'Le traditionnel plat de l\'Aubrac, filant à souhait' },
-                    truite: { name: 'Truite Meunière', desc: 'Pêchée localement, préparée au beurre noisette' },
-                    omelette: { name: 'Omelette aux Cèpes', desc: 'Œufs frais et cèpes de nos forêts' },
-                    confit: { name: 'Confit de Canard', desc: 'Cuisse confite, pommes de terre sarladaises' },
-                    veal: { name: 'Tête de Veau', desc: 'Sauce gribiche, légumes du pot-au-feu' },
-                    tongue: { name: 'Langue de Bœuf', desc: 'Sauce piquante et petits légumes' },
-                },
-                hours: 'Ouverture du restaurant : 7 jours sur 7 - Fermeture les lundis midis',
-                cta: 'Réserver une table',
+                gallery_title: 'Galerie de l\'Hôtel',
+                why_choose_us: {
+                    title: 'Pourquoi choisir notre hôtel ?',
+                    p1: 'Un accueil familial qui vous fait vous sentir chez vous.',
+                    p2: 'Un emplacement imbattable dans les Gorges de la Jonte.',
+                    p3: 'La commodité du tout-en-un : dormir, manger et s\'amuser.',
+                    p4: 'Une expérience culinaire régionale authentique.'
+                }
             },
-            region: {
-                badge: 'Découvertes',
-                title: 'Notre Région',
-                description: 'Situé dans le Parc National des Cévennes, notre hôtel est le point de départ idéal pour explorer des sites touristiques incontournables et profiter de nombreuses randonnées.',
+            rooms_page: {
+                title: 'Nos Chambres',
+                intro: 'Simples, confortables et paisibles. Trouvez la chambre parfaite pour votre séjour dans les Gorges.',
+                types: {
+                    river: {
+                        name: 'Chambre avec Vue Rivière',
+                        specs: '🛏️ 1 Grand Lit Double | 👥 2 Personnes | 📐 18 m²',
+                        desc: 'Une chambre lumineuse et aérée dotée d\'un balcon privé surplombant la rivière Jonte. Parfaite pour les couples en quête d\'une retraite tranquille.',
+                        features: 'Wi-Fi gratuit, TV écran plat, Salle de bain attenante, Bureau, Sèche-cheveux.',
+                    },
+                    standard: {
+                        name: 'Chambre Double Standard',
+                        specs: '🛏️ 1 Lit double | 👥 2 Personnes | 📐 15 m²',
+                        desc: 'Chambre confortable et bien aménagée donnant sur le village ou la cour.',
+                        features: 'Wi-Fi gratuit, TV écran plat, Salle de bain attenante.',
+                    },
+                    family: {
+                        name: 'Chambre Familiale',
+                        specs: '🛏️ 1 Lit Double & 1 Lit Simple | 👥 3-4 Personnes | 📐 22 m²',
+                        desc: 'Hébergement spacieux idéal pour les parents avec un enfant, offrant confort et tranquillité.',
+                        features: 'Wi-Fi gratuit, TV écran plat, Salle de bain attenante, Ambiance calme.',
+                    }
+                },
+                cta: 'Réserver cette chambre',
+                faq: {
+                    title: 'FAQ Hébergement',
+                    q1: 'Quelles sont les heures d\'arrivée et de départ ?',
+                    a1: 'L\'arrivée se fait à partir de 15h00, et le départ avant 11h00.',
+                    q2: 'Fournissez-vous des lits bébé ?',
+                    a2: 'Oui, des lits bébé sont disponibles sur demande.',
+                    q3: 'Les animaux de compagnie sont-ils admis ?',
+                    a3: 'Oui, les animaux de compagnie sont les bienvenus. Veuillez le mentionner lors de la réservation (un supplément peut s\'appliquer).'
+                }
+            },
+            restaurant_page: {
+                title: 'Restaurant & Terroir',
+                intro_title: 'Saveurs Régionales',
+                intro: 'Notre restaurant célèbre le riche patrimoine culinaire de la région. Dégustez des plats généreux et faits maison à partir d\'ingrédients locaux dans une atmosphère conviviale.',
+                menu_intro: 'Nos menus changent au fil des saisons pour vous offrir le meilleur de l\'Aveyron et de la Lozère.',
+                specialties: {
+                    title: 'Nos Spécialités',
+                    aligot: { name: 'Aligot Traditionnel', desc: 'Le plat de l\'Aubrac par excellence, filant à souhait' },
+                    confit: { name: 'Confit de Canard', desc: 'Cuisse confite et pommes de terre sarladaises' },
+                    charcuterie: { name: 'Charcuterie de Pays', desc: 'Sélection des producteurs partenaires' }
+                },
+                menus: {
+                    title: 'Nos Menus',
+                    evening: 'Menu du Soir (Entrée, Plat, Dessert) à partir de 25€',
+                    half_board: 'Demi-pension disponible pour les clients de l\'hôtel'
+                },
+                hours: 'Petit-déjeuner : 7h30 - 10h00 | Dîner : 19h00 - 21h00 | Ouvert aux non-résidents sur réservation',
+                cta: 'Réserver une table'
+            },
+            surroundings_page: {
+                title: 'Explorer la Région',
+                intro: 'Les Gorges de la Jonte et du Tarn offrent un terrain de jeu spectaculaire pour les amoureux de la nature.',
                 activities: {
-                    gorges: { title: 'Les Gorges de la Jonte', desc: 'Des paysages vertigineux et sauvages, parfaits pour la randonnée et l\'escalade.' },
-                    vultures: { title: 'La Maison des Vautours', desc: 'Observez ces oiseaux majestueux et découvrez leur fabuleuse histoire dans leur milieu naturel.' },
-                    viaduct: { title: 'Le Viaduc de Millau', desc: 'À seulement 29 km, admirez cette prouesse architecturale surplombant la vallée du Tarn.' },
-                    causse: { title: 'Le Causse Méjean', desc: 'Un vaste plateau calcaire offrant des panoramas exceptionnels et des sites comme l\'Aven Armand.' },
+                    hiking: { title: 'Sentiers de Randonnée', desc: 'De nombreux sentiers au départ direct de l\'hôtel, adaptés à tous les niveaux.', dist: '0 km' },
+                    vultures: { title: 'Maison des Vautours', desc: 'Observez ces oiseaux majestueux et leur vol incroyable.', dist: '2 km' },
+                    caves: { title: 'Grottes & Géologie', desc: 'Découvrez les superbes formations de l\'Aven Armand et Dargilan.', dist: '15 km' },
+                    villages: { title: 'Villages Pittoresques', desc: 'Visitez Meyrueis, Sainte-Enimie et d\'autres joyaux.', dist: '10 km' },
+                    sports: { title: 'Sports de Plein Air', desc: 'Canoë sur le Tarn, escalade, et via ferrata pour s\'évader.', dist: '5-20 km' }
                 },
+            },
+            offers_page: {
+                title: 'Tarifs & Offres',
+                direct_booking_title: 'Pourquoi réserver en direct ?',
+                direct_booking_text: 'Nous garantissons les tarifs les plus bas, l\'attribution prioritaire des chambres et des conditions flexibles.',
+                rates_title: 'Tarifs à Partir De',
+                rates: {
+                    double: 'Double à partir de 70€',
+                    superior: 'Supérieure à partir de 85€',
+                    family: 'Familiale à partir de 105€'
+                },
+                cta: 'Voir les Disponibilités'
+            },
+            contact_page: {
+                title: 'Contact & Accès',
+                form_title: 'Envoyez-nous un message',
+                directions: {
+                    title: 'Comment Venir',
+                    car: 'Voiture : Accès via A75 (sortie 44/47), à 30 min.',
+                    train: 'Gare : Millau (25 km)',
+                    plane: 'Aéroport : Montpellier ou Rodez'
+                },
+                parking: 'Parking gratuit sur place. Paiements : Visa, Mastercard, Chèques Vacances.',
             },
             reservation: {
-                badge: 'Réservation',
-                title: 'Réservez votre table',
-                description: 'Pour toute réservation de plus de 6 personnes, veuillez nous contacter directement par téléphone.',
                 form: {
                     name: 'Nom complet',
-                    namePlaceholder: 'Jean Dupont',
                     email: 'Email',
-                    emailPlaceholder: 'jean@exemple.com',
                     date: 'Date',
                     time: 'Heure',
-                    timeSelect: 'Sélectionner une heure',
-                    guests: 'Nombre de personnes',
-                    guestsSelectOne: 'personne',
-                    guestsSelectMore: 'personnes',
+                    guests: 'Nombre de pers.',
                     phone: 'Téléphone',
-                    phonePlaceholder: '06 12 34 56 78',
-                    message: 'Demandes spéciales (allergies, etc.)',
-                    messagePlaceholder: 'Avez-vous des allergies ou des demandes particulières ?',
-                    submit: 'Confirmer la réservation',
+                    message: 'Demandes spéciales',
+                    submit: 'Envoyer la demande',
                 },
-                success: {
-                    title: 'Réservation confirmée',
-                    message: 'Nous avons bien reçu votre demande. Un email de confirmation vous a été envoyé.',
-                },
-            },
-            contact: {
-                badge: 'Contact',
-                title: 'Nous trouver',
-                info: {
-                    address: { title: 'Adresse' },
-                    phone: { title: 'Téléphone' },
-                    email: { title: 'Email' },
-                    hours: {
-                        title: 'Horaires',
-                        p1: 'Ouvert 7j/7',
-                        p2: 'Fermé le lundi midi',
-                    },
-                },
-                follow: 'Suivez-nous',
             },
             footer: {
-                legal: 'Mentions légales',
-                privacy: 'Politique de confidentialité',
-                cgv: 'CGV',
-                copyright: 'Hôtel Restaurant de la Jonte. Tous droits réservés.',
+                legal: 'Mentions Légales',
+                privacy: 'Confidentialité',
+                cookies: 'Cookies',
+                copyright: '© 2026 Hôtel Restaurant de la Jonte.',
             },
-        },
+            about: { badge: 'L\'Hôtel' },
+            gallery: { badge: 'Galerie', title: 'Aperçu' },
+            contact: {
+                badge: 'Nous contacter', title: 'Informations Pratiques', info: { address: { title: 'Adresse' }, phone: { title: 'Téléphone' }, email: { title: 'Email' }, hours: { title: 'Horaires', p1: '7j/7', p2: '' } }
+            }
+        }
     },
     en: {
         translation: {
             nav: {
                 home: 'Home',
-                hotel: 'Hotel',
+                hotel: 'The Hotel',
+                rooms: 'Rooms',
                 restaurant: 'Restaurant',
-                region: 'Region',
-                contact: 'Contact',
-                reserve: 'Book',
+                region: 'Region & Activities',
+                offers: 'Offers & Rates',
+                contact: 'Practical Info',
+                reserve: 'Book Now',
             },
             hero: {
-                title: 'Hotel Restaurant',
-                subtitle: 'de la Jonte',
-                welcome: 'Welcome to Les Douzes. Since 1954, the Vergely family has welcomed you to the heart of the Jonte Gorges.',
-                cta: 'Book a table',
-                discover: 'Discover',
+                title: 'Hôtel Restaurant de la Jonte',
+                subtitle: 'Stay in the heart of the Jonte Gorges',
+                welcome: 'Experience nature, relaxation, and regional flavors in a warm, family-run setting.',
+                cta_room: 'Book Now',
+                cta_table: 'Discover the hotel',
             },
-            about: {
-                badge: 'Stay at Les Douzes',
+            home: {
+                presentation: {
+                    title: 'Welcome to Your Nature Getaway',
+                    text: 'Nestled in an exceptional natural setting in the heart of the Jonte Gorges, our family-run hotel welcomes you for a rejuvenating stay. Whether you are a hiking enthusiast, a nature lover, or simply looking for a peaceful retreat with your family, the Hôtel Restaurant de la Jonte is your ideal base camp. Enjoy our panoramic views, outdoor pool, and authentic regional cuisine.',
+                },
+                highlights: {
+                    pool: 'Panoramic Pool',
+                    restaurant: 'Regional Restaurant',
+                    rooms: 'Comfortable Rooms',
+                    setting: 'Exceptional Setting',
+                    parking: 'Free Parking',
+                    wifi: 'Free Wi-Fi'
+                },
+                rooms_preview: {
+                    title: 'Rest & Comfort',
+                    standard: { name: 'Standard Room', desc: 'Cozy and essential. Perfect for a short stay.' },
+                    superior: { name: 'Superior Room', desc: 'Wake up to the sound of the river.' },
+                    family: { name: 'Family Room', desc: 'Spacious comfort for the whole family.' },
+                    cta: 'See All Rooms',
+                    view_room: 'View Room'
+                },
+                restaurant_teaser: {
+                    title: 'Taste the Terroir',
+                    text: 'Discover the authentic flavors of our region. Our chef prepares hearty, homemade dishes highlighting local products, from traditional Aligot to Tripoux. Savor your meal in our dining room or on the sunny terrace.',
+                    cta: 'Discover Our Menus'
+                },
+                region_teaser: {
+                    title: 'Explore the Jonte Gorges',
+                    text: 'Hiking trails, picturesque villages, and breathtaking viewpoints await you just steps from the hotel. Let nature inspire you.',
+                    cta: 'Explore Activities'
+                },
+                reviews: {
+                    title: 'What our guests say',
+                    r1: '"A magnificent setting and a truly warm welcome. The pool after a hike is a dream!" - Sarah M.',
+                    r2: '"Excellent regional food and very clean, comfortable rooms. We will be back." - Jean-Luc P.'
+                },
+                direct_booking: {
+                    title: 'Best Rate Guarantee',
+                    text: 'Book directly on our website for the best prices, flexible conditions, and direct contact with our team.',
+                    cta: 'Book Now'
+                }
+            },
+            hotel_page: {
                 title: 'Our Hotel',
-                p1: 'With direct access to the "Jonte" river, our hotel offers an exceptional setting to recharge your batteries in the heart of the Cévennes National Park.',
-                p2: 'We have 25 equipped rooms (telephone, flat-screen TV, safe, private bathroom, and private balcony). The establishment is accessible to people with reduced mobility (PRM) and pets are allowed.',
-                features: [
-                    'Seasonal outdoor pool & large terrace',
-                    'Relaxation area (lounge, billiards)',
-                    'Free Wi-Fi',
-                    'Private parking & bike garage',
-                ],
-                stats: {
-                    creation: 'Established',
-                    rooms: 'Rooms',
+                history_title: 'Our Story',
+                history_text: 'Since 1954, the Vergely family has welcomed guests with open arms. We pride ourselves on creating a warm, family-run atmosphere where every guest feels at home in the heart of nature.',
+                amenities_title: 'Our Amenities',
+                amenities: {
+                    pool: 'Seasonal outdoor pool & large terrace',
+                    wifi: 'Free Wi-Fi access throughout the hotel',
+                    parking: 'Private on-site parking & bike garage',
+                    pets: 'Pets welcome (please contact us)',
+                    bar: 'Cozy bar and relaxation lounge'
                 },
-            },
-            gallery: {
-                badge: 'Gallery',
-                title: 'Experience in pictures',
-            },
-            menu: {
-                badge: 'Local Gastronomy',
-                title: 'Our Restaurant',
-                description: 'Maxime, Gilles, Cyril, and their team are keepers of a local tradition. We serve typical regional cuisine where you can enjoy the most famous dishes of local gastronomy.',
-                tabs: {
-                    specialties: 'Specialties',
-                    traditional: 'Traditional Dishes',
+                pool_area: {
+                    title: 'The Pool Area',
+                    text: 'Relax in our pristine outdoor pool, surrounded by sun loungers. After a day of exploring, take a refreshing dip while marveling at the towering cliffs of the Jonte Gorges.'
                 },
-                items: {
-                    charcuterie: { name: 'Local Charcuterie', desc: 'Selection of cold meats from our partner producers' },
-                    muffin: { name: 'Roquefort Muffin', desc: 'House specialty with the region\'s famous cheese' },
-                    aligot: { name: 'Aligot', desc: 'The traditional dish from Aubrac, perfectly cheesy' },
-                    truite: { name: 'Trout Meunière', desc: 'Locally caught, prepared with brown butter' },
-                    omelette: { name: 'Porcini Mushroom Omelette', desc: 'Fresh eggs and porcini from our forests' },
+                gallery_title: 'Hotel Gallery',
+                why_choose_us: {
+                    title: 'Why Choose Our Hotel?',
+                    p1: 'Family-run hospitality that makes you feel at home.',
+                    p2: 'Unbeatable location in the Jonte Gorges.',
+                    p3: 'All-in-one convenience: sleep, eat, and swim.',
+                    p4: 'Authentic regional dining experience.'
+                }
+            },
+            rooms_page: {
+                title: 'Our Rooms',
+                intro: 'Simple, comfortable, and peaceful. Find the perfect room for your stay in the Gorges.',
+                types: {
+                    river: {
+                        name: 'Double Room with River View',
+                        specs: '🛏️ 1 Large Double Bed | 👥 2 Guests | 📐 18 sqm',
+                        desc: 'A bright and airy room featuring a private balcony overlooking the Jonte river. Perfect for couples seeking a tranquil retreat.',
+                        features: 'Free Wi-Fi, Flat-screen TV, En-suite bathroom, Desk, Hairdryer.',
+                    },
+                    standard: {
+                        name: 'Standard Double Room',
+                        specs: '🛏️ 1 Double Bed | 👥 2 Guests | 📐 15 sqm',
+                        desc: 'Comfortable and well-appointed room overlooking the village or courtyard.',
+                        features: 'Free Wi-Fi, Flat-screen TV, En-suite bathroom.',
+                    },
+                    family: {
+                        name: 'Family Room',
+                        specs: '🛏️ 1 Double & 1 Single Bed | 👥 3-4 Guests | 📐 22 sqm',
+                        desc: 'Spacious accommodation ideal for parents with a child, offering comfort and peace.',
+                        features: 'Free Wi-Fi, Flat-screen TV, En-suite bathroom, Quiet ambiance.',
+                    }
+                },
+                cta: 'Book This Room',
+                faq: {
+                    title: 'Accommodation FAQ',
+                    q1: 'What time is check-in/check-out?',
+                    a1: 'Check-in is from 3:00 PM, and check-out is by 11:00 AM.',
+                    q2: 'Do you provide baby cots?',
+                    a2: 'Yes, baby cots are available upon request.',
+                    q3: 'Are pets allowed?',
+                    a3: 'Yes, pets are welcome. Please mention them when booking (a small supplement may apply).'
+                }
+            },
+            restaurant_page: {
+                title: 'Restaurant & Terroir',
+                intro_title: 'Authentic Regional Flavors',
+                intro: 'Our restaurant celebrates the rich culinary heritage of the region. Enjoy generous, homemade dishes crafted from local ingredients in a convivial atmosphere.',
+                menu_intro: 'Our menus change with the seasons to offer you the best of the terroir.',
+                specialties: {
+                    title: 'Our Specialties',
+                    aligot: { name: 'Traditional Aligot', desc: 'The traditional dish from Aubrac, perfectly cheesy' },
                     confit: { name: 'Duck Confit', desc: 'Confit leg with Sarladaise-style potatoes' },
-                    veal: { name: 'Calf\'s Head', desc: 'Gribiche sauce, pot-au-feu vegetables' },
-                    tongue: { name: 'Beef Tongue', desc: 'Spicy sauce and baby vegetables' },
+                    charcuterie: { name: 'Local Charcuterie', desc: 'Selection of cold meats from our partner producers' }
                 },
-                hours: 'Restaurant hours: 7 days a week - Closed Monday lunch',
-                cta: 'Book a table',
+                menus: {
+                    title: 'Our Menus',
+                    evening: 'Evening Menu (Starter, Main, Dessert) starting from €25',
+                    half_board: 'Half-board available for hotel guests'
+                },
+                hours: 'Breakfast: 7:30 AM - 10:00 AM | Dinner: 7:00 PM - 9:00 PM | Open to external guests upon reservation',
+                cta: 'Book a table'
             },
-            region: {
-                badge: 'Discoveries',
-                title: 'Our Region',
-                description: 'Located in the Cévennes National Park, our hotel is the ideal starting point to explore must-see tourist sites and enjoy numerous hikes.',
+            surroundings_page: {
+                title: 'Explore the Region',
+                intro: 'The Jonte Gorges offer a spectacular playground for nature lovers and thrill-seekers alike.',
                 activities: {
-                    gorges: { title: 'The Jonte Gorges', desc: 'Veriginous and wild landscapes, perfect for hiking and climbing.' },
-                    vultures: { title: 'The Vulture House', desc: 'Observe these majestic birds and discover their fabulous history in their natural environment.' },
-                    viaduct: { title: 'The Millau Viaduct', desc: 'Just 29 km away, admire this architectural feat overlooking the Tarn valley.' },
-                    causse: { title: 'Causse Méjean', desc: 'A vast limestone plateau offering exceptional panoramas and sites like Aven Armand.' },
+                    hiking: { title: 'Hiking Trails', desc: 'Numerous trails starting directly from the hotel, suitable for all levels.', dist: '0 km' },
+                    vultures: { title: 'The Vultures', desc: 'Observe these majestic birds and their incredible flight over the gorges.', dist: '2 km' },
+                    caves: { title: 'Caves & Geology', desc: 'Discover the stunning rock formations of Aven Armand and Dargilan.', dist: '15 km' },
+                    villages: { title: 'Picturesque Villages', desc: 'Visit Meyrueis, Sainte-Enimie, and other historic gems of the region.', dist: '10 km' },
+                    sports: { title: 'Outdoor Sports', desc: 'Canoeing on the Tarn, climbing, and via ferrata for the adventurous.', dist: '5-20 km' }
                 },
+            },
+            offers_page: {
+                title: 'Rates & Special Offers',
+                direct_booking_title: 'Why book directly with us?',
+                direct_booking_text: 'We guarantee the lowest available rates, priority room allocation, and the most flexible cancellation policies.',
+                rates_title: 'Starting Rates',
+                rates: {
+                    double: 'Double Room from €70',
+                    superior: 'Superior Room from €85',
+                    family: 'Family Room from €105'
+                },
+                cta: 'Check Availability & Exact Pricing'
+            },
+            contact_page: {
+                title: 'Contact & Location',
+                form_title: 'Send us a message',
+                directions: {
+                    title: 'How to Get Here',
+                    car: 'By Car: Access via A75 (exit 44 or 47), 30 mins away.',
+                    train: 'Nearest Station: Millau (25 km)',
+                    plane: 'Airport: Montpellier or Rodez'
+                },
+                parking: 'Free private parking on site. Accepted payments: Visa, Mastercard, Holiday Vouchers.',
             },
             reservation: {
-                badge: 'Reservation',
-                title: 'Book your table',
-                description: 'For any reservation of more than 6 people, please contact us directly by phone.',
                 form: {
                     name: 'Full Name',
-                    namePlaceholder: 'John Doe',
                     email: 'Email',
-                    emailPlaceholder: 'john@example.com',
                     date: 'Date',
                     time: 'Time',
-                    timeSelect: 'Select a time',
                     guests: 'Number of guests',
-                    guestsSelectOne: 'person',
-                    guestsSelectMore: 'people',
                     phone: 'Phone',
-                    phonePlaceholder: '06 12 34 56 78',
                     message: 'Special requests (allergies, etc.)',
-                    messagePlaceholder: 'Do you have any allergies or special requests?',
                     submit: 'Confirm reservation',
                 },
-                success: {
-                    title: 'Reservation confirmed',
-                    message: 'We have received your request. A confirmation email has been sent to you.',
-                },
-            },
-            contact: {
-                badge: 'Contact',
-                title: 'Find us',
-                info: {
-                    address: { title: 'Address' },
-                    phone: { title: 'Phone' },
-                    email: { title: 'Email' },
-                    hours: {
-                        title: 'Hours',
-                        p1: 'Open 7/7',
-                        p2: 'Closed Monday lunch',
-                    },
-                },
-                follow: 'Follow us',
             },
             footer: {
                 legal: 'Legal Notice',
                 privacy: 'Privacy Policy',
-                cgv: 'Terms of Sale',
-                copyright: 'Hotel Restaurant de la Jonte. All rights reserved.',
+                cookies: 'Cookie Policy',
+                copyright: '© 2026 Hotel Restaurant de la Jonte.',
             },
-        },
-    },
-    es: {
-        translation: {
-            nav: {
-                home: 'Inicio',
-                hotel: 'Hotel',
-                restaurant: 'Restaurante',
-                region: 'Región',
-                contact: 'Contacto',
-                reserve: 'Reservar',
-            },
-            hero: {
-                title: 'Hotel Restaurante',
-                subtitle: 'de la Jonte',
-                welcome: 'Bienvenido a Les Douzes. Desde 1954, la familia Vergely le da la bienvenida al corazón de las Gargantas del Jonte.',
-                cta: 'Reservar una mesa',
-                discover: 'Descubrir',
-            },
-            about: {
-                badge: 'Alójese en Les Douzes',
-                title: 'Nuestro Hotel',
-                p1: 'Con acceso directo al río "Jonte", nuestro hotel ofrece un entorno excepcional para recargar pilas en el corazón del Parque Nacional de las Cevenas.',
-                p2: 'Disponemos de 25 habitaciones equipadas (teléfono, TV de pantalla plana, caja fuerte, baño privado y balcón privado). El establecimiento es accesible para personas con movilidad reducida (PMR) y se admiten mascotas.',
-                features: [
-                    'Piscina exterior de temporada y gran terraza',
-                    'Zona de relax (salón, billard)',
-                    'Wifi gratuito',
-                    'Aparcamiento privado y garaje para bicicletas',
-                ],
-                stats: {
-                    creation: 'Creación',
-                    rooms: 'Habitaciones',
-                },
-            },
-            gallery: {
-                badge: 'Galería',
-                title: 'La experiencia en imágenes',
-            },
-            menu: {
-                badge: 'Gastronomía Local',
-                title: 'Nuestro Restaurante',
-                description: 'Maxime, Gilles, Cyril y su equipo son garantes de una tradición local. Servimos cocina típica regional donde podrá disfrutar de los platos más conocidos de la gastronomía local.',
-                tabs: {
-                    specialties: 'Especialidades',
-                    traditional: 'Platos Tradicionales',
-                },
-                items: {
-                    charcuterie: { name: 'Charcuteria Local', desc: 'Selección de embutidos de nuestros productores asociados' },
-                    muffin: { name: 'Muffin de Roquefort', desc: 'Especialidad de la casa con el famoso queso de la región' },
-                    aligot: { name: 'Aligot', desc: 'El plato tradicional de Aubrac, perfectamente hilado' },
-                    truite: { name: 'Trucha Meunière', desc: 'Pescada localmente, preparada con mantequilla avellana' },
-                    omelette: { name: 'Tortilla con Boletos', desc: 'Huevos frescos y boletos de nuestros bosques' },
-                    confit: { name: 'Confit de Pato', desc: 'Muslo confitado con patatas estilo Sarladaise' },
-                    veal: { name: 'Cabeza de Ternera', desc: 'Salsa gribiche, verduras de pot-au-feu' },
-                    tongue: { name: 'Lengua de Vaca', desc: 'Salsa picante y verduritas' },
-                },
-                hours: 'Horario del restaurante: 7 días a la semana - Cerrado lunes mediodía',
-                cta: 'Reservar una mesa',
-            },
-            region: {
-                badge: 'Descubrimientos',
-                title: 'Nuestra Región',
-                description: 'Situado en el Parque Nacional de las Cevenas, nuestro hotel es el punto de partida ideal para explorar lugares turísticos imprescindibles y disfrutar de numerosas excursiones.',
-                activities: {
-                    gorges: { title: 'Las Gargantas del Jonte', desc: 'Paisajes vertiginosos y salvajes, perfectos para el senderismo y la escalada.' },
-                    vultures: { title: 'La Casa de los Buitres', desc: 'Observe estas majestuosas aves y descubra su fabulosa historia en su entorno natural.' },
-                    viaduct: { title: 'El Viaducto de Millau', desc: 'A solo 29 km, admire esta proeza arquitectónica con vistas al valle del Tarn.' },
-                    causse: { title: 'Causse Méjean', desc: 'Una vasta meseta caliza que ofrece panoramas excepcionales y lugares como Aven Armand.' },
-                },
-            },
-            reservation: {
-                badge: 'Reserva',
-                title: 'Reserve su mesa',
-                description: 'Para cualquier reserva de más de 6 personas, póngase en contacto con nosotros directamente por teléfono.',
-                form: {
-                    name: 'Nombre completo',
-                    namePlaceholder: 'Juan Pérez',
-                    email: 'Correo electrónico',
-                    emailPlaceholder: 'juan@ejemplo.com',
-                    date: 'Fecha',
-                    time: 'Hora',
-                    timeSelect: 'Seleccionar hora',
-                    guests: 'Número de personas',
-                    guestsSelectOne: 'persona',
-                    guestsSelectMore: 'personas',
-                    phone: 'Teléfono',
-                    phonePlaceholder: '06 12 34 56 78',
-                    message: 'Peticiones especiales (alergias, etc.)',
-                    messagePlaceholder: '¿Tiene alguna alergia o petición especial?',
-                    submit: 'Confirmar reserva',
-                },
-                success: {
-                    title: 'Reserva confirmada',
-                    message: 'Hemos recibido su solicitud. Se le ha enviado un correo electrónico de confirmación.',
-                },
-            },
+            about: { badge: 'The Hotel' },
+            gallery: { badge: 'Gallery', title: 'Experience' },
             contact: {
-                badge: 'Contacto',
-                title: 'Encuéntrenos',
-                info: {
-                    address: { title: 'Dirección' },
-                    phone: { title: 'Teléfono' },
-                    email: { title: 'Correo electrónico' },
-                    hours: {
-                        title: 'Horario',
-                        p1: 'Abierto 7/7',
-                        p2: 'Cerrado lunes mediodía',
-                    },
-                },
-                follow: 'Síguenos',
-            },
-            footer: {
-                legal: 'Aviso legal',
-                privacy: 'Política de privacidad',
-                cgv: 'Condiciones generales de venta',
-                copyright: 'Hotel Restaurant de la Jonte. Todos los derechos reservados.',
-            },
-        },
-    },
+                badge: 'Contact', title: 'Practical Info', info: { address: { title: 'Address' }, phone: { title: 'Phone' }, email: { title: 'Email' }, hours: { title: 'Hours', p1: '7 days a week', p2: '' } }
+            }
+        }
+    }
 };
 
 i18n

@@ -1,13 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: "Cormorant Garamond", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  
+  --font-display: "Outfit", sans-serif;
+
+  --color-forest-950: #0d1a14;
+  --color-forest-900: #1a2f23;
+  --color-forest-800: #2c4a39;
+  --color-beige-50: #fbfaf8;
+  --color-beige-100: #f5f2ed;
+  --color-beige-200: #e8e2d8;
+  --color-river-100: #e8f1f5;
+  --color-river-200: #cfdfe8;
   --color-gold-400: #D4AF37;
   --color-gold-500: #C5A028;
-  --color-gold-600: #B59019;
 }
 
 html {
@@ -15,9 +22,29 @@ html {
 }
 
 body {
-  @apply bg-white text-zinc-900 transition-colors duration-300;
+  @apply bg-beige-100 text-forest-950 font-sans transition-colors duration-500;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-display {
+  @apply font-display tracking-tight leading-tight;
+}
+
+.glass {
+  @apply bg-white/70 backdrop-blur-xl border border-white/20 shadow-xl;
+}
+
+.btn-primary {
+  @apply px-8 py-4 bg-forest-900 text-white font-bold tracking-[0.15em] uppercase text-[11px] rounded-full hover:bg-gold-500 transition-all duration-500 shadow-lg hover:scale-105 active:scale-95;
+}
+
+.btn-secondary {
+  @apply px-8 py-4 bg-white text-forest-900 border border-forest-900/10 font-bold tracking-[0.15em] uppercase text-[11px] rounded-full hover:bg-beige-200 transition-all duration-500 shadow-md;
 }
 
 * {
-  @apply transition-colors duration-300;
+  @apply transition-all duration-300;
 }

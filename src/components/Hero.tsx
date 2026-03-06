@@ -1,54 +1,66 @@
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 export default function Hero() {
   const { t } = useTranslation();
 
   return (
-    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://image.jimcdn.com/cdn-cgi/image/width=1920%2Cheight=1080%2Cfit=cover%2Cformat=jpg%2C/app/cms/storage/image/path/s094131847179d8bd/image/if78263a65b8da59c/version/1585511025/image.jpg"
-          alt="Restaurant ambiance"
-          className="w-full h-full object-cover"
+          src="https://image.jimcdn.com/cdn-cgi/image//app/cms/storage/image/path/s094131847179d8bd/image/if78263a65b8da59c/version/1585511025/image.jpg"
+          alt="Gorges de la Jonte Panorama"
+          className="w-full h-full object-cover scale-105"
         />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-forest-950/40 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-beige-100" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="font-serif text-5xl md:text-7xl lg:text-8xl text-white font-medium mb-6 tracking-tight"
+      <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
         >
-          {t('hero.title')}
-          <br />
-          <span className="italic font-light text-gold-400">{t('hero.subtitle')}</span>
-        </motion.h1>
+          <span className="inline-block text-gold-400 font-bold tracking-[0.4em] uppercase text-[10px] mb-8">
+            Nature Chic & Cuisine de Terroir
+          </span>
+          <h1 className="font-display text-7xl md:text-9xl text-white font-bold mb-10 tracking-tight leading-[0.85]">
+            {t('hero.title')}
+            <span className="block italic font-light text-white/80 mt-4 text-4xl md:text-6xl">{t('hero.subtitle')}</span>
+          </h1>
+        </motion.div>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6 }}
-          className="text-lg md:text-xl text-zinc-100 mb-10 font-light tracking-wide max-w-2xl mx-auto"
+          className="text-lg md:text-xl text-white/80 mb-16 max-w-2xl mx-auto leading-relaxed font-light"
         >
           {t('hero.welcome')}
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1 }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-6"
         >
-          <a
-            href="#reservation"
-            className="inline-block px-8 py-4 bg-white text-zinc-900 font-medium tracking-wide uppercase text-sm hover:bg-gold-500 hover:text-white transition-all duration-300 rounded-sm"
+          <Link
+            to="/chambres"
+            className="btn-primary"
           >
-            {t('hero.cta')}
-          </a>
+            {t('hero.cta_room')}
+          </Link>
+          <Link
+            to="/hotel"
+            className="btn-secondary !bg-white/10 !text-white !border-white/20 backdrop-blur-md hover:!bg-white hover:!text-forest-950"
+          >
+            {t('hero.cta_table')}
+          </Link>
         </motion.div>
       </div>
 
@@ -57,14 +69,13 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2, duration: 1 }}
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+        className="absolute bottom-12 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
       >
-        <span className="text-white/80 text-xs uppercase tracking-widest mb-2">{t('hero.discover')}</span>
-        <div className="w-[1px] h-12 bg-white/30 overflow-hidden">
+        <div className="w-[1px] h-20 bg-white/20 overflow-hidden relative">
           <motion.div
-            animate={{ y: [0, 48] }}
-            transition={{ repeat: Infinity, duration: 1.5, ease: "linear" }}
-            className="w-full h-1/2 bg-white"
+            animate={{ y: [0, 80] }}
+            transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}
+            className="w-full h-1/2 bg-gold-400 absolute top-0"
           />
         </div>
       </motion.div>
