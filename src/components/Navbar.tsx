@@ -55,10 +55,14 @@ export default function Navbar() {
           <div className="flex-shrink-0 flex-1">
             <Link
               to="/"
-              className={`font-display text-2xl font-bold tracking-[0.1em] transition-colors duration-500 uppercase ${isScrolled || !isTransparentPage ? 'text-forest-950' : 'text-white'
-                }`}
+              className="flex items-center justify-center h-16 w-32 md:h-20 md:w-40 transition-transform duration-300 hover:scale-105"
             >
-              La Jonte
+              <img
+                src="/images/logo.png"
+                alt="Hôtel Restaurant de la Jonte Logo"
+                className={`w-full h-full object-contain transition-all duration-300 ${isScrolled || !isTransparentPage ? 'brightness-0 invert-0' : 'brightness-0 invert'
+                  }`}
+              />
             </Link>
           </div>
 

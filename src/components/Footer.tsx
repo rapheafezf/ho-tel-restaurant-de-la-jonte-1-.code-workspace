@@ -12,8 +12,12 @@ export default function Footer() {
 
           {/* Brand & Bio */}
           <div className="lg:col-span-1">
-            <Link to="/" className="font-display text-2xl font-bold tracking-[0.1em] text-white block mb-6 uppercase">
-              La Jonte
+            <Link to="/" className="block mb-8 w-40 h-20 transition-transform duration-300 hover:scale-105">
+              <img
+                src="/images/logo.png"
+                alt="Hôtel Restaurant de la Jonte Logo"
+                className="w-full h-full object-contain brightness-0 invert"
+              />
             </Link>
             <p className="text-sm leading-relaxed mb-6 font-light">
               Depuis 1954, notre famille vous accueille au cœur des Gorges de la Jonte pour une expérience authentique et naturelle.
