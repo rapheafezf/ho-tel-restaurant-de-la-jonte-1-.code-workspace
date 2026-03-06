@@ -70,7 +70,7 @@ export default function Hotel() {
                 <div className="container mx-auto px-4 max-w-6xl">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div>
-                            <span className="text-gold-400 font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Relaxation</span>
+                            <span className="text-gold-400 font-bold tracking-[0.2em] uppercase text-xs mb-4 block">{t('hotel_page.relaxation_badge')}</span>
                             <h2 className="text-4xl md:text-5xl font-display mb-8">{t('hotel_page.pool_area.title')}</h2>
                             <p className="text-xl text-white/70 leading-relaxed">
                                 {t('hotel_page.pool_area.text')}

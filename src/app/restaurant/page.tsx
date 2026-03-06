@@ -28,7 +28,7 @@ export default function Restaurant() {
                 <img src="https://image.jimcdn.com/cdn-cgi/image/width=2048,height=2048,fit=contain,format=jpg/app/cms/storage/image/path/s094131847179d8bd/image/if19a7491a0f0dd6a/version/1679995217/image.jpg" alt="Restaurant Terrace" className="absolute inset-0 w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-forest-950/60" />
                 <div className="relative z-10 text-center px-4">
-                    <span className="text-gold-400 font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Gastronomie</span>
+                    <span className="text-gold-400 font-bold tracking-[0.2em] uppercase text-sm mb-4 block">{t('restaurant_page.gastronomy_badge')}</span>
                     <h1 className="text-5xl md:text-7xl font-display text-white">{t('restaurant_page.title')}</h1>
                 </div>
             </section>
@@ -71,21 +71,21 @@ export default function Restaurant() {
                     </div>
                     <div className="grid md:grid-cols-2 gap-8">
                         <div className="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm text-center">
-                            <h3 className="text-2xl font-display mb-4">Menu du Terroir</h3>
+                            <h3 className="text-2xl font-display mb-4">{t('restaurant_page.menu_terroir.title')}</h3>
                             <p className="text-gold-400 text-xl mb-6">{t('restaurant_page.menus.evening')}</p>
                             <ul className="text-white/70 space-y-4 mb-8">
-                                <li>Assiette de charcuterie locale ou Salade au Roquefort</li>
-                                <li>Aligot traditionnel & Saucisse artisanale ou Truite Meunière</li>
-                                <li>Plateau de fromages affinés ou Dessert maison</li>
+                                <li>{t('restaurant_page.menu_terroir.starter')}</li>
+                                <li>{t('restaurant_page.menu_terroir.main')}</li>
+                                <li>{t('restaurant_page.menu_terroir.dessert')}</li>
                             </ul>
                         </div>
                         <div className="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm flex flex-col justify-center text-center">
-                            <h3 className="text-2xl font-display mb-4">Demi-Pension</h3>
+                            <h3 className="text-2xl font-display mb-4">{t('restaurant_page.half_board.title')}</h3>
                             <p className="text-lg text-white/70 leading-relaxed mb-6">
                                 {t('restaurant_page.menus.half_board')}
                             </p>
                             <p className="text-sm font-light text-white/50 italic">
-                                Disponible pour les séjours de 2 nuits ou plus. Réservez lors de la sélection de votre chambre.
+                                {t('restaurant_page.half_board.conditions')}
                             </p>
                         </div>
                     </div>
@@ -111,7 +111,7 @@ export default function Restaurant() {
                         <div className="absolute bottom-0 left-0 w-32 h-32 bg-forest-950/5 rounded-tr-full"></div>
 
                         <div className="relative z-10">
-                            <h2 className="text-3xl font-display text-forest-950 mb-10">Informations Pratiques</h2>
+                            <h2 className="text-3xl font-display text-forest-950 mb-10">{t('restaurant_page.practical_info')}</h2>
 
                             <div className="flex flex-col md:flex-row justify-center items-center gap-12 mb-12">
                                 <div className="flex items-center gap-4 text-left">
@@ -123,7 +123,7 @@ export default function Restaurant() {
                                 <div className="flex items-center gap-4 text-left">
                                     <Info className="w-8 h-8 text-gold-500 flex-shrink-0" />
                                     <p className="text-forest-900/80 max-w-[200px] leading-relaxed">
-                                        Sur réservation pour les clients extérieurs.
+                                        {t('restaurant_page.external_guests_note')}
                                     </p>
                                 </div>
                             </div>

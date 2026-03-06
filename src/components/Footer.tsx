@@ -22,7 +22,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-sm leading-relaxed mb-6 font-light">
-              Depuis 1954, notre famille vous accueille au cœur des Gorges de la Jonte pour une expérience authentique et naturelle.
+              {t('footer.bio')}
             </p>
             <div className="flex space-x-4">
               <a href="https://www.facebook.com/hotelrestaurantlesdouzes" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-gold-500 hover:text-white hover:border-gold-500 transition-colors">
@@ -33,7 +33,7 @@ export default function Footer() {
 
           {/* Navigation */}
           <div>
-            <h4 className="text-white font-bold tracking-widest uppercase text-xs mb-8 font-display">Navigation</h4>
+            <h4 className="text-white font-bold tracking-widest uppercase text-xs mb-8 font-display">{t('footer.sections.navigation')}</h4>
             <div className="flex flex-col space-y-4 text-sm font-light">
               <Link href="/" className="hover:text-gold-400 transition-colors">{t('nav.home')}</Link>
               <Link href="/hotel" className="hover:text-gold-400 transition-colors">{t('nav.hotel')}</Link>
@@ -46,7 +46,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-white font-bold tracking-widest uppercase text-xs mb-8 font-display">Contact</h4>
+            <h4 className="text-white font-bold tracking-widest uppercase text-xs mb-8 font-display">{t('footer.sections.contact')}</h4>
             <div className="flex flex-col space-y-4 text-sm font-light">
               <p>Les Douzes<br />12150 Peyreleau, France</p>
               <a href="tel:+33565626072" className="hover:text-gold-400 transition-colors">+33 (0)5 65 62 60 72</a>
@@ -56,7 +56,7 @@ export default function Footer() {
 
           {/* Legal */}
           <div>
-            <h4 className="text-white font-bold tracking-widest uppercase text-xs mb-8 font-display">Légal</h4>
+            <h4 className="text-white font-bold tracking-widest uppercase text-xs mb-8 font-display">{t('footer.sections.legal')}</h4>
             <div className="flex flex-col space-y-4 text-sm font-light">
               <Link href="/legal" className="hover:text-gold-400 transition-colors">{t('footer.legal')}</Link>
               <Link href="/legal" className="hover:text-gold-400 transition-colors">{t('footer.privacy')}</Link>

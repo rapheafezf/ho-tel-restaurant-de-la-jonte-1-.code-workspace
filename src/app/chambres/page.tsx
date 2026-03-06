@@ -133,9 +133,9 @@ export default function Rooms() {
                                     </p>
 
                                     <div className="bg-white p-6 rounded-2xl mb-8 border border-beige-200">
-                                        <h3 className="text-sm font-bold uppercase tracking-wider text-forest-950 mb-4">Équipements & Vue</h3>
+                                        <h3 className="text-sm font-bold uppercase tracking-wider text-forest-950 mb-4">{t('rooms_page.features_title')}</h3>
                                         <ul className="space-y-3">
-                                            {room.features.split(', ').map((feat, i) => (
+                                            {Array.isArray(room.features) && room.features.map((feat, i) => (
                                                 <li key={i} className="flex items-center text-forest-900/70">
                                                     <div className="w-2 h-2 rounded-full bg-gold-500 mr-3"></div>
                                                     {feat}

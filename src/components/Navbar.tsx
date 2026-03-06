@@ -88,7 +88,7 @@ export default function Navbar() {
 
             <Link
               href="/contact"
-              className="btn-primary py-3 px-6 text-[10px]"
+              className="btn-primary py-3 px-6 text-[10px] whitespace-nowrap flex-shrink-0"
             >
               {t('nav.reserve')}
             </Link>

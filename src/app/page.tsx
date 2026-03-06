@@ -26,7 +26,7 @@ export default function Home() {
                 <div className="container mx-auto px-4 max-w-6xl">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div className="order-2 md:order-1">
-                            <span className="text-gold-500 font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Nature Chic</span>
+                            <span className="text-gold-500 font-bold tracking-[0.2em] uppercase text-xs mb-4 block">{t('home.presentation.badge')}</span>
                             <h2 className="text-4xl md:text-5xl font-display text-forest-950 mb-8">{t('home.presentation.title')}</h2>
                             <p className="text-lg text-forest-900/70 leading-relaxed mb-8">
                                 {t('home.presentation.text')}
@@ -111,7 +111,7 @@ export default function Home() {
                         <div className="relative">
                             <img src="https://image.jimcdn.com/cdn-cgi/image/width=2048,height=2048,fit=contain,format=jpg/app/cms/storage/image/path/s094131847179d8bd/image/if19a7491a0f0dd6a/version/1679995217/image.jpg" alt="Restaurant Dish" className="rounded-2xl shadow-xl w-full h-[600px] object-cover" />
                             <div className="absolute -bottom-8 -right-8 bg-gold-500 p-8 rounded-2xl hidden lg:block text-white font-display text-4xl italic shadow-2xl">
-                                Gastronomie Locale
+                                {t('home.restaurant_teaser.floating_label')}
                             </div>
                         </div>
                         <div>

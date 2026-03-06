@@ -30,7 +30,7 @@ export default function About() {
             {/* Decorative Label */}
             <div className="absolute top-12 -left-8 bg-gold-500 p-8 rounded-2xl shadow-xl hidden md:block">
               <span className="block text-4xl font-display font-bold text-white leading-none tracking-tighter">25</span>
-              <span className="text-[10px] uppercase tracking-[0.2em] text-white/80 font-bold">Chambres</span>
+              <span className="text-[10px] uppercase tracking-[0.2em] text-white/80 font-bold">{t('home.about.rooms_label')}</span>
             </div>
           </motion.div>
 
@@ -42,31 +42,31 @@ export default function About() {
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           >
             <span className="text-gold-500 font-bold tracking-[0.3em] uppercase text-xs mb-6 block">
-              Une Maison de Famille
+              {t('home.about.badge')}
             </span>
             <h2 className="font-display text-5xl md:text-7xl text-forest-950 mb-10 leading-[0.9] tracking-tighter font-bold">
-              Bienvenue <span className="italic font-light block mt-4 text-forest-950/40">aux Douzes</span>
+              {t('home.about.title_welcome')} <span className="italic font-light block mt-4 text-forest-950/40">{t('home.about.title_at')}</span>
             </h2>
 
             <div className="space-y-8 text-forest-900/70 font-light leading-relaxed text-xl">
               <p>
-                Depuis 1954, la famille Vergely vous accueille dans un cadre naturel préservé, au bord de la Jonte.
+                {t('home.about.p1')}
               </p>
               <p>
-                Notre établissement allie confort moderne et authenticité régionale pour vous offrir une parenthèse de calme absolu.
+                {t('home.about.p2')}
               </p>
             </div>
 
             <div className="mt-16 flex flex-col sm:flex-row items-center gap-8 border-t border-forest-900/10 pt-10">
               <div className="flex items-center gap-4">
                 <span className="block text-4xl font-display font-bold text-gold-500 tracking-tighter leading-none">1954</span>
-                <span className="text-[9px] w-20 leading-tight uppercase tracking-widest text-forest-950/40 font-bold">Année de Fondation</span>
+                <span className="text-[9px] w-20 leading-tight uppercase tracking-widest text-forest-950/40 font-bold">{t('home.about.foundation_label')}</span>
               </div>
               <Link
                 href="/chambres"
                 className="btn-primary py-4 px-10"
               >
-                Découvrir l'Hôtel
+                {t('home.about.cta')}
               </Link>
             </div>
           </motion.div>

@@ -42,7 +42,7 @@ export default function Surroundings() {
                 <img src="https://image.jimcdn.com/cdn-cgi/image//app/cms/storage/image/path/s094131847179d8bd/image/if78263a65b8da59c/version/1585511025/image.jpg" alt="Jonte Gorges" className="absolute inset-0 w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-forest-950/40 mix-blend-multiply" />
                 <div className="relative z-10 text-center px-4">
-                    <span className="text-gold-400 font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Découverte</span>
+                    <span className="text-gold-400 font-bold tracking-[0.2em] uppercase text-sm mb-4 block">{t('surroundings_page.discovery_badge')}</span>
                     <h1 className="text-5xl md:text-7xl font-display text-white">{t('surroundings_page.title')}</h1>
                 </div>
             </section>
@@ -83,7 +83,7 @@ export default function Surroundings() {
                                         </p>
                                         <div className="flex items-center text-gold-500 text-sm font-medium">
                                             <MapPin className="w-4 h-4 mr-2" />
-                                            Distance : {t(`surroundings_page.activities.${activity.id}.dist`)}
+                                            {t('surroundings_page.distance_label')}{t(`surroundings_page.activities.${activity.id}.dist`)}
                                         </div>
                                     </div>
                                 </motion.div>

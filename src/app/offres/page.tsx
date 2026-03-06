@@ -10,9 +10,9 @@ export default function Offers() {
     const { t } = useTranslation();
 
     const advantages = [
-        { icon: ShieldCheck, title: "Meilleur Tarif", desc: "Nous vous garantissons le prix le plus bas en direct." },
-        { icon: CalendarCheck, title: "Disponibilité", desc: "Toutes nos chambres sont accessibles en temps réel." },
-        { icon: Tag, title: "Offres Exclusives", desc: "Accédez à nos forfaits demi-pension et offres spéciales." }
+        { icon: ShieldCheck, title: t('offers_page.advantages_list.best_rate.title'), desc: t('offers_page.advantages_list.best_rate.desc') },
+        { icon: CalendarCheck, title: t('offers_page.advantages_list.availability.title'), desc: t('offers_page.advantages_list.availability.desc') },
+        { icon: Tag, title: t('offers_page.advantages_list.exclusive.title'), desc: t('offers_page.advantages_list.exclusive.desc') }
     ];
 
     return (
@@ -21,7 +21,7 @@ export default function Offers() {
                 <img src="https://image.jimcdn.com/cdn-cgi/image/width=2048,height=2048,fit=contain,format=jpg/app/cms/storage/image/path/s094131847179d8bd/image/ia174abe91727c5d4/version/1679995217/image.jpg" alt="Resort" className="absolute inset-0 w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-forest-950/60 mix-blend-multiply" />
                 <div className="relative z-10 text-center px-4">
-                    <span className="text-gold-400 font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Réservation</span>
+                    <span className="text-gold-400 font-bold tracking-[0.2em] uppercase text-sm mb-4 block">{t('offers_page.booking_badge')}</span>
                     <h1 className="text-5xl md:text-7xl font-display text-white">{t('offers_page.title')}</h1>
                 </div>
             </section>
@@ -50,33 +50,33 @@ export default function Offers() {
                 <div className="container mx-auto px-4 max-w-4xl">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl font-display text-forest-950">{t('offers_page.rates_title')}</h2>
-                        <p className="text-forest-900/60 mt-4 italic">Tarifs à titre indicatif, variant selon la saison.</p>
+                        <p className="text-forest-900/60 mt-4 italic">{t('offers_page.rates_info')}</p>
                     </div>
 
                     <div className="bg-beige-50 rounded-3xl overflow-hidden border border-beige-200">
                         <table className="w-full text-left border-collapse">
                             <thead>
                                 <tr className="bg-forest-950 text-white font-display text-lg">
-                                    <th className="p-6 border-b border-forest-900/10">Type de Chambre</th>
-                                    <th className="p-6 border-b border-forest-900/10">Basse Saison</th>
-                                    <th className="p-6 border-b border-forest-900/10">Haute Saison</th>
+                                    <th className="p-6 border-b border-forest-900/10">{t('offers_page.table.type')}</th>
+                                    <th className="p-6 border-b border-forest-900/10">{t('offers_page.table.low_season')}</th>
+                                    <th className="p-6 border-b border-forest-900/10">{t('offers_page.table.high_season')}</th>
                                 </tr>
                             </thead>
                             <tbody className="text-forest-900/80">
                                 <tr className="border-b border-beige-200 hover:bg-beige-100 transition-colors">
                                     <td className="p-6 font-bold text-forest-950">{t('rooms_page.types.standard.name')}</td>
-                                    <td className="p-6">À partir de 70€</td>
-                                    <td className="p-6">À partir de 90€</td>
+                                    <td className="p-6">{t('offers_page.table.starting_at')} 70€</td>
+                                    <td className="p-6">{t('offers_page.table.starting_at')} 90€</td>
                                 </tr>
                                 <tr className="border-b border-beige-200 hover:bg-beige-100 transition-colors">
                                     <td className="p-6 font-bold text-forest-950">{t('rooms_page.types.river.name')}</td>
-                                    <td className="p-6">À partir de 85€</td>
-                                    <td className="p-6">À partir de 110€</td>
+                                    <td className="p-6">{t('offers_page.table.starting_at')} 85€</td>
+                                    <td className="p-6">{t('offers_page.table.starting_at')} 110€</td>
                                 </tr>
                                 <tr className="hover:bg-beige-100 transition-colors">
                                     <td className="p-6 font-bold text-forest-950">{t('rooms_page.types.family.name')}</td>
-                                    <td className="p-6">À partir de 105€</td>
-                                    <td className="p-6">À partir de 135€</td>
+                                    <td className="p-6">{t('offers_page.table.starting_at')} 105€</td>
+                                    <td className="p-6">{t('offers_page.table.starting_at')} 135€</td>
                                 </tr>
                             </tbody>
                         </table>

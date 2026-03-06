@@ -12,7 +12,7 @@ export default function Contact() {
         <div className="pt-32 pb-24 bg-beige-50">
             <div className="container mx-auto px-4 max-w-6xl">
                 <header className="text-center mb-16">
-                    <span className="text-gold-500 font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Infos Pratiques</span>
+                    <span className="text-gold-500 font-bold tracking-[0.2em] uppercase text-xs mb-4 block">{t('nav.contact')}</span>
                     <h1 className="text-5xl md:text-7xl font-display text-forest-950">{t('contact_page.title')}</h1>
                 </header>
 
@@ -38,20 +38,20 @@ export default function Contact() {
                                         <input type="tel" className="w-full bg-beige-50 border border-beige-200 rounded-xl px-4 py-3 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-all text-forest-950" />
                                     </div>
                                     <div className="space-y-2">
-                                        <label className="text-sm font-bold text-forest-900/60 uppercase">Sujet</label>
+                                        <label className="text-sm font-bold text-forest-900/60 uppercase">{t('contact_page.form.subject')}</label>
                                         <select className="w-full bg-beige-50 border border-beige-200 rounded-xl px-4 py-3 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-all text-forest-950">
-                                            <option>Demande de réservation</option>
-                                            <option>Information générale</option>
-                                            <option>Restaurant</option>
+                                            <option>{t('contact_page.form.options.booking')}</option>
+                                            <option>{t('contact_page.form.options.info')}</option>
+                                            <option>{t('contact_page.form.options.restaurant')}</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-sm font-bold text-forest-900/60 uppercase">Message</label>
+                                    <label className="text-sm font-bold text-forest-900/60 uppercase">{t('contact_page.form.message')}</label>
                                     <textarea rows={4} className="w-full bg-beige-50 border border-beige-200 rounded-xl px-4 py-3 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-all text-forest-950" required></textarea>
                                 </div>
                                 <button type="submit" className="btn-primary w-full cursor-pointer">
-                                    Envoyer le message
+                                    {t('contact_page.form.submit')}
                                 </button>
                             </form>
                         </section>
@@ -79,17 +79,17 @@ export default function Contact() {
                         <section className="grid grid-cols-2 gap-4">
                             <div className="bg-white p-8 rounded-2xl shadow-sm border border-beige-200 text-center flex flex-col items-center">
                                 <Phone className="w-8 h-8 text-gold-500 mb-4" />
-                                <h3 className="font-bold text-forest-950 mb-1">Téléphone</h3>
+                                <h3 className="font-bold text-forest-950 mb-1">{t('contact.info.phone.title')}</h3>
                                 <a href="tel:+33565626072" className="text-forest-900/70 hover:text-gold-500 transition-colors">+33 (0)5 65 62 60 72</a>
                             </div>
                             <div className="bg-white p-8 rounded-2xl shadow-sm border border-beige-200 text-center flex flex-col items-center">
                                 <Mail className="w-8 h-8 text-gold-500 mb-4" />
-                                <h3 className="font-bold text-forest-950 mb-1">Email</h3>
+                                <h3 className="font-bold text-forest-950 mb-1">{t('contact.info.email.title')}</h3>
                                 <a href="mailto:hotel-la-jonte@orange.fr" className="text-forest-900/70 hover:text-gold-500 transition-colors text-sm lg:text-base break-all">hotel-la-jonte@orange.fr</a>
                             </div>
                             <div className="bg-white p-8 rounded-2xl shadow-sm border border-beige-200 text-center flex flex-col items-center">
                                 <MapPin className="w-8 h-8 text-gold-500 mb-4" />
-                                <h3 className="font-bold text-forest-950 mb-1">Adresse</h3>
+                                <h3 className="font-bold text-forest-950 mb-1">{t('contact.info.address.title')}</h3>
                                 <p className="text-forest-900/70">Les Douzes<br />12150 Peyreleau</p>
                             </div>
                             <div className="bg-white p-8 rounded-2xl shadow-sm border border-beige-200 text-center flex flex-col items-center bg-beige-100">
@@ -116,7 +116,7 @@ export default function Contact() {
                             <div className="flex items-start gap-4">
                                 <Info className="w-6 h-6 text-gold-500 shrink-0 mt-1" />
                                 <p className="text-forest-900/70 leading-relaxed font-light">
-                                    {t('contact_page.parking')} Animaux acceptés sur demande (supplément possible selon le gabarit).
+                                    {t('contact_page.parking')} {t('contact_page.pets_info')}
                                 </p>
                             </div>
                         </section>

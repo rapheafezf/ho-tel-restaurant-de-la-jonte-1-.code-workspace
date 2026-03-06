@@ -38,9 +38,9 @@ h4,
 }
 
 .btn-primary {
-  @apply px-8 py-4 bg-forest-900 text-white font-bold tracking-[0.15em] uppercase text-[11px] rounded-full hover:bg-gold-500 transition-all duration-500 shadow-lg hover:scale-105 active:scale-95;
+  @apply px-8 py-4 bg-forest-900 text-white font-bold tracking-[0.15em] uppercase text-[11px] rounded-full hover:bg-gold-500 transition-all duration-500 shadow-lg hover:scale-105 active:scale-95 whitespace-nowrap;
 }
 
 .btn-secondary {
-  @apply px-8 py-4 bg-white text-forest-900 border border-forest-900/10 font-bold tracking-[0.15em] uppercase text-[11px] rounded-full hover:bg-beige-200 transition-all duration-500 shadow-md;
+  @apply px-8 py-4 bg-white text-forest-900 border border-forest-900/10 font-bold tracking-[0.15em] uppercase text-[11px] rounded-full hover:bg-beige-200 transition-all duration-500 shadow-md whitespace-nowrap;
 }
