@@ -1,8 +1,11 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { MapPin, Compass, Bird, Mountain, Map, Activity } from 'lucide-react';
+import '../../i18n';
 
-export default function SurroundingsPage() {
+export default function Surroundings() {
     const { t } = useTranslation();
 
     const activities = [
@@ -34,8 +37,7 @@ export default function SurroundingsPage() {
     ];
 
     return (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}>
-            {/* Hero Section */}
+        <>
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
                 <img src="https://image.jimcdn.com/cdn-cgi/image//app/cms/storage/image/path/s094131847179d8bd/image/if78263a65b8da59c/version/1585511025/image.jpg" alt="Jonte Gorges" className="absolute inset-0 w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-forest-950/40 mix-blend-multiply" />
@@ -45,7 +47,6 @@ export default function SurroundingsPage() {
                 </div>
             </section>
 
-            {/* Intro */}
             <section className="py-24 bg-beige-50">
                 <div className="container mx-auto px-4 max-w-3xl text-center">
                     <h2 className="text-3xl md:text-4xl font-display text-forest-950 leading-relaxed mb-6">
@@ -55,7 +56,6 @@ export default function SurroundingsPage() {
                 </div>
             </section>
 
-            {/* Activities Grid */}
             <section className="py-24 bg-white">
                 <div className="container mx-auto px-4 max-w-6xl">
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -92,6 +92,6 @@ export default function SurroundingsPage() {
                     </div>
                 </div>
             </section>
-        </motion.div>
+        </>
     );
 }

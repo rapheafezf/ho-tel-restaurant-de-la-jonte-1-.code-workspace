@@ -1,6 +1,8 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export default function About() {
   const { t } = useTranslation();
@@ -61,7 +63,7 @@ export default function About() {
                 <span className="text-[9px] w-20 leading-tight uppercase tracking-widest text-forest-950/40 font-bold">Année de Fondation</span>
               </div>
               <Link
-                to="/chambres"
+                href="/chambres"
                 className="btn-primary py-4 px-10"
               >
                 Découvrir l'Hôtel

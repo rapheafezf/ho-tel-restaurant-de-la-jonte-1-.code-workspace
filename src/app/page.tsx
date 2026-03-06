@@ -1,26 +1,27 @@
+'use client';
+
 import Hero from '../components/Hero';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import '../i18n';
 
-export default function HomePage() {
+export default function Home() {
     const { t } = useTranslation();
 
-    // Features Icons (Highlights)
     const highlights = [
-        { key: 'pool', icon: 'M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z' }, // Cloud/Pool
-        { key: 'restaurant', icon: 'M12 3v1m0 16v1m9-9h-1M4 9H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z' }, // Sun/Terrace
-        { key: 'rooms', icon: 'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6' }, // Home/Bed
-        { key: 'setting', icon: 'M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9' }, // Globe/Nature
-        { key: 'parking', icon: 'M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4' }, // Car/Parking
-        { key: 'wifi', icon: 'M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.14 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0' }, // Wifi
+        { key: 'pool', icon: 'M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z' },
+        { key: 'restaurant', icon: 'M12 3v1m0 16v1m9-9h-1M4 9H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z' },
+        { key: 'rooms', icon: 'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6' },
+        { key: 'setting', icon: 'M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9' },
+        { key: 'parking', icon: 'M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4' },
+        { key: 'wifi', icon: 'M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.14 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0' },
     ];
 
     return (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}>
+        <>
             <Hero />
 
-            {/* Quick Introduction Block */}
             <section className="py-24 bg-beige-50">
                 <div className="container mx-auto px-4 max-w-6xl">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -30,7 +31,7 @@ export default function HomePage() {
                             <p className="text-lg text-forest-900/70 leading-relaxed mb-8">
                                 {t('home.presentation.text')}
                             </p>
-                            <Link to="/hotel" className="btn-primary">
+                            <Link href="/hotel" className="btn-primary">
                                 {t('nav.hotel')}
                             </Link>
                         </div>
@@ -41,7 +42,6 @@ export default function HomePage() {
                 </div>
             </section>
 
-            {/* Key Highlights Section */}
             <section className="py-20 bg-white">
                 <div className="container mx-auto px-4 max-w-6xl">
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-8 text-center bg-white">
@@ -62,7 +62,6 @@ export default function HomePage() {
                 </div>
             </section>
 
-            {/* Rooms Section */}
             <section className="py-24 bg-forest-950 text-white">
                 <div className="container mx-auto px-4 max-w-6xl">
                     <div className="text-center mb-16">
@@ -91,7 +90,7 @@ export default function HomePage() {
                                 <div className="p-8 text-center">
                                     <h3 className="text-2xl font-display mb-4 text-gold-50">{t(`home.rooms_preview.${type}.name`)}</h3>
                                     <p className="text-white/60 mb-6">{t(`home.rooms_preview.${type}.desc`)}</p>
-                                    <Link to="/chambres" className="text-gold-400 font-bold hover:text-white uppercase tracking-wider text-sm transition-colors cursor-pointer">
+                                    <Link href="/chambres" className="text-gold-400 font-bold hover:text-white uppercase tracking-wider text-sm transition-colors cursor-pointer">
                                         {t('home.rooms_preview.view_room')} &rarr;
                                     </Link>
                                 </div>
@@ -99,14 +98,13 @@ export default function HomePage() {
                         ))}
                     </div>
                     <div className="text-center mt-16">
-                        <Link to="/chambres" className="btn-primary !bg-gold-500 !text-forest-950 hover:!bg-white">
+                        <Link href="/chambres" className="btn-primary !bg-gold-500 !text-forest-950 hover:!bg-white">
                             {t('home.rooms_preview.cta')}
                         </Link>
                     </div>
                 </div>
             </section>
 
-            {/* Restaurant Teaser */}
             <section className="py-24 bg-beige-50">
                 <div className="container mx-auto px-4 max-w-6xl">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -122,7 +120,7 @@ export default function HomePage() {
                             <p className="text-lg text-forest-900/70 leading-relaxed mb-10">
                                 {t('home.restaurant_teaser.text')}
                             </p>
-                            <Link to="/restaurant" className="btn-primary">
+                            <Link href="/restaurant" className="btn-primary">
                                 {t('home.restaurant_teaser.cta')}
                             </Link>
                         </div>
@@ -130,7 +128,6 @@ export default function HomePage() {
                 </div>
             </section>
 
-            {/* Region & Activities */}
             <section className="py-24 bg-white">
                 <div className="container mx-auto px-4 max-w-6xl text-center">
                     <span className="text-gold-500 font-bold tracking-[0.2em] uppercase text-xs mb-4 block">{t('nav.region')}</span>
@@ -154,13 +151,12 @@ export default function HomePage() {
                         </div>
                     </div>
 
-                    <Link to="/environs" className="btn-secondary border border-forest-950 text-forest-950 hover:bg-forest-950 hover:text-white">
+                    <Link href="/environs" className="btn-secondary border border-forest-950 text-forest-950 hover:bg-forest-950 hover:text-white">
                         {t('home.region_teaser.cta')}
                     </Link>
                 </div>
             </section>
 
-            {/* Guest Reviews */}
             <section className="py-20 bg-forest-900 text-white">
                 <div className="container mx-auto px-4 max-w-5xl text-center">
                     <h2 className="text-3xl font-display mb-12 text-gold-400">{t('home.reviews.title')}</h2>
@@ -177,17 +173,15 @@ export default function HomePage() {
                 </div>
             </section>
 
-            {/* Direct Booking Block */}
             <section className="py-20 bg-gold-500">
                 <div className="container mx-auto px-4 max-w-4xl text-center">
                     <h2 className="text-4xl md:text-5xl font-display text-forest-950 mb-6 font-bold">{t('home.direct_booking.title')}</h2>
                     <p className="text-xl text-forest-950/80 mb-10 max-w-2xl mx-auto leading-relaxed">{t('home.direct_booking.text')}</p>
-                    <Link to="/contact" className="btn-primary !bg-forest-950 !text-white hover:!bg-white hover:!text-forest-950 border border-transparent !px-8 !py-4 !text-sm">
+                    <Link href="/contact" className="btn-primary !bg-forest-950 !text-white hover:!bg-white hover:!text-forest-950 border border-transparent !px-8 !py-4 !text-sm">
                         {t('home.direct_booking.cta')}
                     </Link>
                 </div>
             </section>
-
-        </motion.div>
+        </>
     );
 }

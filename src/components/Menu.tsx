@@ -1,7 +1,9 @@
+'use client';
+
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 type MenuTab = 'specialties' | 'traditional';
 
@@ -150,7 +152,7 @@ export default function Menu() {
 
         <div className="mt-24 text-center">
           <Link
-            to="/restaurant"
+            href="/restaurant"
             className="btn-primary"
           >
             Découvrir le Restaurant

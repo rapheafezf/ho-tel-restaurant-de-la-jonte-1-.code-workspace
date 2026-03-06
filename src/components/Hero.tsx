@@ -1,6 +1,8 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export default function Hero() {
   const { t } = useTranslation();
@@ -47,13 +49,13 @@ export default function Hero() {
           className="flex flex-col sm:flex-row items-center justify-center gap-6"
         >
           <Link
-            to="/chambres"
+            href="/chambres"
             className="btn-primary"
           >
             {t('hero.cta_room')}
           </Link>
           <Link
-            to="/hotel"
+            href="/hotel"
             className="btn-secondary !bg-white/10 !text-white !border-white/20 backdrop-blur-md hover:!bg-white hover:!text-forest-950"
           >
             {t('hero.cta_table')}

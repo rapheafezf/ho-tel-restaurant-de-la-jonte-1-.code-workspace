@@ -1,9 +1,12 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Clock, Info, UtensilsCrossed } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import '../../i18n';
 
-export default function RestaurantPage() {
+export default function Restaurant() {
     const { t } = useTranslation();
 
     const specialties = [
@@ -20,8 +23,7 @@ export default function RestaurantPage() {
     ];
 
     return (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}>
-            {/* Hero Section */}
+        <>
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
                 <img src="https://image.jimcdn.com/cdn-cgi/image/width=2048,height=2048,fit=contain,format=jpg/app/cms/storage/image/path/s094131847179d8bd/image/if19a7491a0f0dd6a/version/1679995217/image.jpg" alt="Restaurant Terrace" className="absolute inset-0 w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-forest-950/60" />
@@ -31,7 +33,6 @@ export default function RestaurantPage() {
                 </div>
             </section>
 
-            {/* Intro */}
             <section className="py-24 bg-beige-50">
                 <div className="container mx-auto px-4 max-w-4xl text-center">
                     <h2 className="text-4xl font-display text-forest-950 mb-8">{t('restaurant_page.intro_title')}</h2>
@@ -42,7 +43,6 @@ export default function RestaurantPage() {
                 </div>
             </section>
 
-            {/* Specialties */}
             <section className="py-24 bg-white">
                 <div className="container mx-auto px-4 max-w-6xl">
                     <div className="text-center mb-16">
@@ -63,7 +63,6 @@ export default function RestaurantPage() {
                 </div>
             </section>
 
-            {/* Menus & Pricing */}
             <section className="py-24 bg-forest-950 text-white">
                 <div className="container mx-auto px-4 max-w-5xl">
                     <div className="text-center mb-16">
@@ -93,7 +92,6 @@ export default function RestaurantPage() {
                 </div>
             </section>
 
-            {/* Photo Gallery */}
             <section className="py-24 bg-white">
                 <div className="container mx-auto px-4 max-w-6xl">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -106,7 +104,6 @@ export default function RestaurantPage() {
                 </div>
             </section>
 
-            {/* Practical Info & Booking */}
             <section className="py-24 bg-beige-50 border-t border-beige-200">
                 <div className="container mx-auto px-4 max-w-4xl">
                     <div className="bg-white rounded-3xl p-12 shadow-sm border border-beige-200 text-center relative overflow-hidden">
@@ -131,13 +128,13 @@ export default function RestaurantPage() {
                                 </div>
                             </div>
 
-                            <Link to="/contact" className="btn-primary inline-block">
+                            <Link href="/contact" className="btn-primary inline-block">
                                 {t('restaurant_page.cta')}
                             </Link>
                         </div>
                     </div>
                 </div>
             </section>
-        </motion.div>
+        </>
     );
 }

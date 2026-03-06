@@ -1,15 +1,19 @@
+'use client';
+
 import { useState, useEffect } from 'react';
 import { Menu, X, Globe, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import '../i18n';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLangOpen, setIsLangOpen] = useState(false);
   const { t, i18n } = useTranslation();
-  const location = useLocation();
+  const pathname = usePathname();
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
@@ -41,11 +45,11 @@ export default function Navbar() {
     { code: 'de', name: '🇩🇪 Deutsch' },
   ];
 
-  const isTransparentPage = location.pathname === '/' || location.pathname === '/chambres';
+  const isTransparentPage = pathname === '/' || pathname === '/chambres';
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-500 ${isScrolled
+      className={`fixed w-full z-50 transition-[padding,background-color,border-color,box-shadow,backdrop-filter] duration-500 ${isScrolled
         ? 'bg-beige-50/90 backdrop-blur-xl shadow-sm py-3'
         : isTransparentPage ? 'bg-transparent py-8' : 'bg-beige-100 py-3 shadow-sm'
         }`}
@@ -54,13 +58,13 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0 flex-1">
             <Link
-              to="/"
+              href="/"
               className="flex items-center justify-center h-16 w-32 md:h-20 md:w-40 transition-transform duration-300 hover:scale-105"
             >
               <img
                 src="/images/logo.png"
                 alt="Hôtel Restaurant de la Jonte Logo"
-                className={`w-full h-full object-contain transition-all duration-300 ${isScrolled || !isTransparentPage ? 'brightness-0 invert-0' : 'brightness-0 invert'
+                className={`w-full h-full object-contain transition-[filter] duration-300 ${isScrolled || !isTransparentPage ? 'brightness-100 invert-0' : 'brightness-0 invert'
                   }`}
               />
             </Link>
@@ -68,19 +72,22 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-10">
-            {navLinks.map((link) => (
-              <NavLink
-                key={link.name}
-                to={link.href}
-                className={({ isActive }) => `text-[11px] font-bold tracking-[0.2em] uppercase transition-all duration-300 ${isActive ? 'text-gold-500' : (isScrolled || !isTransparentPage ? 'text-forest-900/60 hover:text-forest-900' : 'text-white/70 hover:text-white')
-                  }`}
-              >
-                {link.name}
-              </NavLink>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={`text-[11px] font-bold tracking-[0.2em] uppercase transition-all duration-300 ${isActive ? 'text-gold-500' : (isScrolled || !isTransparentPage ? 'text-forest-900/60 hover:text-forest-900' : 'text-white/70 hover:text-white')
+                    }`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
 
             <Link
-              to="/contact"
+              href="/contact"
               className="btn-primary py-3 px-6 text-[10px]"
             >
               {t('nav.reserve')}
@@ -147,19 +154,22 @@ export default function Navbar() {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden absolute top-full left-0 w-full bg-beige-50 shadow-2xl py-12 px-8 flex flex-col space-y-8 overflow-hidden"
           >
-            {navLinks.map((link) => (
-              <NavLink
-                key={link.name}
-                to={link.href}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className={({ isActive }) => `text-forest-950 text-2xl font-display tracking-tight border-b border-forest-950/5 pb-4 ${isActive ? 'text-gold-500' : ''}`}
-              >
-                {link.name}
-              </NavLink>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`text-forest-950 text-2xl font-display tracking-tight border-b border-forest-950/5 pb-4 ${isActive ? 'text-gold-500' : ''}`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
 
             <Link
-              to="/contact"
+              href="/contact"
               onClick={() => setIsMobileMenuOpen(false)}
               className="btn-primary text-center py-6"
             >

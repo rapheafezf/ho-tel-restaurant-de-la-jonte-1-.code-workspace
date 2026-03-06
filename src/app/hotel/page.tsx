@@ -1,8 +1,11 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Camera, CheckCircle2 } from 'lucide-react';
+import '../../i18n';
 
-export default function HotelPage() {
+export default function Hotel() {
     const { t } = useTranslation();
 
     const amenities = [
@@ -23,8 +26,7 @@ export default function HotelPage() {
     ];
 
     return (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}>
-            {/* Hero Section */}
+        <>
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
                 <img src="https://image.jimcdn.com/cdn-cgi/image/width=2048,height=2048,fit=contain,format=jpg/app/cms/storage/image/path/s094131847179d8bd/image/i7bf4b91abed70eab/version/1679995217/image.jpg" alt="Hotel Interior" className="absolute inset-0 w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-forest-950/50 mix-blend-multiply" />
@@ -34,7 +36,6 @@ export default function HotelPage() {
                 </div>
             </section>
 
-            {/* History & Story */}
             <section className="py-24 bg-beige-50">
                 <div className="container mx-auto px-4 max-w-4xl text-center">
                     <h2 className="text-4xl font-display text-forest-950 mb-8">{t('hotel_page.history_title')}</h2>
@@ -45,7 +46,6 @@ export default function HotelPage() {
                 </div>
             </section>
 
-            {/* Amenities Grid */}
             <section className="py-24 bg-white">
                 <div className="container mx-auto px-4 max-w-6xl">
                     <div className="text-center mb-16">
@@ -66,7 +66,6 @@ export default function HotelPage() {
                 </div>
             </section>
 
-            {/* The Pool Area */}
             <section className="py-24 bg-forest-950 text-white">
                 <div className="container mx-auto px-4 max-w-6xl">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -84,7 +83,6 @@ export default function HotelPage() {
                 </div>
             </section>
 
-            {/* Why Choose Us */}
             <section className="py-24 bg-beige-50">
                 <div className="container mx-auto px-4 max-w-4xl">
                     <div className="text-center mb-16">
@@ -101,7 +99,6 @@ export default function HotelPage() {
                 </div>
             </section>
 
-            {/* Gallery */}
             <section className="py-24 bg-white">
                 <div className="container mx-auto px-4 max-w-6xl">
                     <div className="text-center mb-16">
@@ -117,6 +114,6 @@ export default function HotelPage() {
                     </div>
                 </div>
             </section>
-        </motion.div>
+        </>
     );
 }

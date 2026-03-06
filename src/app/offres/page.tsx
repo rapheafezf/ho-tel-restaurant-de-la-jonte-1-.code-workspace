@@ -1,9 +1,12 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { ShieldCheck, CalendarCheck, Tag } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import '../../i18n';
 
-export default function OffersPage() {
+export default function Offers() {
     const { t } = useTranslation();
 
     const advantages = [
@@ -13,8 +16,7 @@ export default function OffersPage() {
     ];
 
     return (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}>
-            {/* Hero Section */}
+        <>
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
                 <img src="https://image.jimcdn.com/cdn-cgi/image/width=2048,height=2048,fit=contain,format=jpg/app/cms/storage/image/path/s094131847179d8bd/image/ia174abe91727c5d4/version/1679995217/image.jpg" alt="Resort" className="absolute inset-0 w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-forest-950/60 mix-blend-multiply" />
@@ -24,7 +26,6 @@ export default function OffersPage() {
                 </div>
             </section>
 
-            {/* Direct Booking Advantage */}
             <section className="py-24 bg-gold-500 text-forest-950">
                 <div className="container mx-auto px-4 max-w-5xl">
                     <div className="text-center mb-16">
@@ -45,7 +46,6 @@ export default function OffersPage() {
                 </div>
             </section>
 
-            {/* Rates Table */}
             <section className="py-24 bg-white">
                 <div className="container mx-auto px-4 max-w-4xl">
                     <div className="text-center mb-16">
@@ -83,12 +83,12 @@ export default function OffersPage() {
                     </div>
 
                     <div className="mt-12 text-center">
-                        <Link to="/contact" className="btn-primary inline-block">
+                        <Link href="/contact" className="btn-primary inline-block">
                             {t('offers_page.cta')}
                         </Link>
                     </div>
                 </div>
             </section>
-        </motion.div>
+        </>
     );
 }

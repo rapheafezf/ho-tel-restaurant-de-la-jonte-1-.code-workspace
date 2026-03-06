@@ -1,6 +1,8 @@
+'use client';
+
 import { motion } from 'framer-motion';
 
-export default function LegalPage() {
+export default function Legal() {
     return (
         <motion.div
             initial={{ opacity: 0 }}

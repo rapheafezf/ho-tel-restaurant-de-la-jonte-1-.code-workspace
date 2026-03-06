@@ -1,5 +1,7 @@
+'use client';
+
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Facebook, Instagram } from 'lucide-react';
 
 export default function Footer() {
@@ -12,7 +14,7 @@ export default function Footer() {
 
           {/* Brand & Bio */}
           <div className="lg:col-span-1">
-            <Link to="/" className="block mb-8 w-40 h-20 transition-transform duration-300 hover:scale-105">
+            <Link href="/" className="block mb-8 w-40 h-20 transition-transform duration-300 hover:scale-105">
               <img
                 src="/images/logo.png"
                 alt="Hôtel Restaurant de la Jonte Logo"
@@ -36,12 +38,12 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-bold tracking-widest uppercase text-xs mb-8 font-display">Navigation</h4>
             <div className="flex flex-col space-y-4 text-sm font-light">
-              <Link to="/" className="hover:text-gold-400 transition-colors">{t('nav.home')}</Link>
-              <Link to="/hotel" className="hover:text-gold-400 transition-colors">{t('nav.hotel')}</Link>
-              <Link to="/chambres" className="hover:text-gold-400 transition-colors">{t('nav.rooms')}</Link>
-              <Link to="/restaurant" className="hover:text-gold-400 transition-colors">{t('nav.restaurant')}</Link>
-              <Link to="/environs" className="hover:text-gold-400 transition-colors">{t('nav.region')}</Link>
-              <Link to="/offres" className="hover:text-gold-400 transition-colors">{t('nav.offers')}</Link>
+              <Link href="/" className="hover:text-gold-400 transition-colors">{t('nav.home')}</Link>
+              <Link href="/hotel" className="hover:text-gold-400 transition-colors">{t('nav.hotel')}</Link>
+              <Link href="/chambres" className="hover:text-gold-400 transition-colors">{t('nav.rooms')}</Link>
+              <Link href="/restaurant" className="hover:text-gold-400 transition-colors">{t('nav.restaurant')}</Link>
+              <Link href="/environs" className="hover:text-gold-400 transition-colors">{t('nav.region')}</Link>
+              <Link href="/offres" className="hover:text-gold-400 transition-colors">{t('nav.offers')}</Link>
             </div>
           </div>
 
@@ -59,9 +61,9 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-bold tracking-widest uppercase text-xs mb-8 font-display">Légal</h4>
             <div className="flex flex-col space-y-4 text-sm font-light">
-              <Link to="/legal" className="hover:text-gold-400 transition-colors">{t('footer.legal')}</Link>
-              <Link to="/legal" className="hover:text-gold-400 transition-colors">{t('footer.privacy')}</Link>
-              <Link to="/legal" className="hover:text-gold-400 transition-colors">{t('footer.cookies')}</Link>
+              <Link href="/legal" className="hover:text-gold-400 transition-colors">{t('footer.legal')}</Link>
+              <Link href="/legal" className="hover:text-gold-400 transition-colors">{t('footer.privacy')}</Link>
+              <Link href="/legal" className="hover:text-gold-400 transition-colors">{t('footer.cookies')}</Link>
             </div>
           </div>
         </div>

@@ -1,11 +1,14 @@
+'use client';
+
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Plus, Minus, ZoomIn } from 'lucide-react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Lightbox from '../components/Lightbox';
+import Link from 'next/link';
+import Lightbox from '../../components/Lightbox';
+import '../../i18n';
 
-export default function RoomsPage() {
+export default function Rooms() {
     const { t } = useTranslation();
     const [openFaq, setOpenFaq] = useState<number | null>(null);
     const [lightbox, setLightbox] = useState<{ images: string[]; index: number } | null>(null);
@@ -53,8 +56,7 @@ export default function RoomsPage() {
     ];
 
     return (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}>
-            {/* Lightbox */}
+        <>
             {lightbox && (
                 <Lightbox
                     images={lightbox.images}
@@ -63,7 +65,6 @@ export default function RoomsPage() {
                 />
             )}
 
-            {/* Hero */}
             <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
                 <img
                     src="https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/s094131847179d8bd/image/ia8a47c7bf9e3fd57/version/1650376519/image.jpg"
@@ -79,7 +80,6 @@ export default function RoomsPage() {
                 </div>
             </section>
 
-            {/* Rooms List */}
             <section className="py-24 bg-beige-50">
                 <div className="container mx-auto px-4 max-w-6xl">
                     <div className="grid gap-24">
@@ -92,9 +92,7 @@ export default function RoomsPage() {
                                 transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
                                 className={`flex flex-col ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-12 items-center`}
                             >
-                                {/* Images with Lightbox trigger */}
                                 <div className="flex-1 w-full grid grid-cols-2 gap-4">
-                                    {/* Main image */}
                                     <div
                                         className="col-span-2 h-80 rounded-2xl overflow-hidden relative group cursor-zoom-in"
                                         onClick={() => setLightbox({ images: room.images, index: 0 })}
@@ -109,7 +107,6 @@ export default function RoomsPage() {
                                         </div>
                                     </div>
 
-                                    {/* Secondary image */}
                                     <div
                                         className="col-span-2 md:col-span-1 h-48 rounded-2xl overflow-hidden hidden md:block relative group cursor-zoom-in"
                                         onClick={() => setLightbox({ images: room.images, index: 1 })}
@@ -124,13 +121,11 @@ export default function RoomsPage() {
                                         </div>
                                     </div>
 
-                                    {/* Specs card */}
                                     <div className="col-span-2 md:col-span-1 h-48 rounded-2xl overflow-hidden hidden md:flex bg-forest-900 items-center justify-center p-6 text-center">
                                         <p className="text-gold-400 font-display text-lg italic leading-relaxed">{room.specs}</p>
                                     </div>
                                 </div>
 
-                                {/* Info */}
                                 <div className="flex-1 max-w-xl">
                                     <h2 className="text-4xl font-display text-forest-950 mb-6">{room.type}</h2>
                                     <p className="text-lg text-forest-900/80 mb-8 leading-relaxed font-light">
@@ -149,7 +144,7 @@ export default function RoomsPage() {
                                         </ul>
                                     </div>
 
-                                    <Link to="/contact" className="btn-primary w-full md:w-auto text-center block">
+                                    <Link href="/contact" className="btn-primary w-full md:w-auto text-center block">
                                         {t('rooms_page.cta')}
                                     </Link>
                                 </div>
@@ -159,7 +154,6 @@ export default function RoomsPage() {
                 </div>
             </section>
 
-            {/* FAQ Section */}
             <section className="py-24 bg-white border-t border-beige-200">
                 <div className="container mx-auto px-4 max-w-3xl">
                     <div className="text-center mb-16">
@@ -198,6 +192,6 @@ export default function RoomsPage() {
                     </div>
                 </div>
             </section>
-        </motion.div>
+        </>
     );
 }
