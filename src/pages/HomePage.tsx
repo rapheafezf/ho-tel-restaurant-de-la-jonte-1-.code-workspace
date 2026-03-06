@@ -70,10 +70,23 @@ export default function HomePage() {
                         <h2 className="text-4xl md:text-5xl font-display mb-6">{t('home.rooms_preview.title')}</h2>
                     </div>
                     <div className="grid md:grid-cols-3 gap-8">
-                        {['standard', 'superior', 'family'].map((type) => (
+                        {[
+                            {
+                                type: 'standard',
+                                image: 'https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/s094131847179d8bd/image/i85fa10438ae911c2/version/1650376519/image.jpg'
+                            },
+                            {
+                                type: 'superior',
+                                image: 'https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/s094131847179d8bd/image/idd8f0fe43c8f816d/version/1650376519/image.jpg'
+                            },
+                            {
+                                type: 'family',
+                                image: 'https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/s094131847179d8bd/image/i3a8ee678d8dac99f/version/1650376519/image.jpg'
+                            }
+                        ].map(({ type, image }) => (
                             <div key={type} className="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition-colors">
                                 <div className="h-64 overflow-hidden relative">
-                                    <img src="https://image.jimcdn.com/cdn-cgi/image/width=1920,height=400,fit=contain,format=jpg/app/cms/storage/image/path/s094131847179d8bd/image/ia8a47c7bf9e3fd57/version/1650376519/image.jpg" alt={type} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                                    <img src={image} alt={type} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                                 </div>
                                 <div className="p-8 text-center">
                                     <h3 className="text-2xl font-display mb-4 text-gold-50">{t(`home.rooms_preview.${type}.name`)}</h3>
