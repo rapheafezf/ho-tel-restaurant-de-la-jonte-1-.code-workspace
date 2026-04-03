@@ -10,9 +10,9 @@ export default function Hero() {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 bg-forest-900">
         <img
-          src="https://image.jimcdn.com/cdn-cgi/image//app/cms/storage/image/path/s094131847179d8bd/image/if78263a65b8da59c/version/1585511025/image.jpg"
+          src="https://image.jimcdn.com/app/cms/image/transf/dimension=2560x1440:format=jpg/path/s094131847179d8bd/image/if78263a65b8da59c/version/1585511025/image.jpg"
           alt="Gorges de la Jonte Panorama"
           className="w-full h-full object-cover scale-105"
         />
