@@ -224,7 +224,7 @@ const resources = {
                 directions: {
                     title: 'Comment Venir',
                     car: 'Voiture : Accès via A75 (sortie 44/47), à 30 min.',
-                    train: 'Gare : Millau (25 km)',
+                    train: 'Gare : Millau (30 km)',
                     plane: 'Aéroport : Montpellier ou Rodez'
                 },
                 parking: 'Parking gratuit sur place. Paiements : Visa, Mastercard, Chèques Vacances.',
@@ -482,7 +482,7 @@ const resources = {
                 directions: {
                     title: 'How to Get Here',
                     car: 'By Car: Access via A75 (exit 44 or 47), 30 mins away.',
-                    train: 'Nearest Station: Millau (25 km)',
+                    train: 'Nearest Station: Millau (30 km)',
                     plane: 'Airport: Montpellier or Rodez'
                 },
                 parking: 'Free private parking on site. Accepted payments: Visa, Mastercard, Holiday Vouchers.',
@@ -740,7 +740,7 @@ const resources = {
                 directions: {
                     title: 'Cómo Llegar',
                     car: 'En coche: Acceso por A75 (salida 44 o 47), a 30 min.',
-                    train: 'Estación más cercana: Millau (25 km)',
+                    train: 'Estación más cercana: Millau (30 km)',
                     plane: 'Aeropuerto: Montpellier o Rodez'
                 },
                 parking: 'Parking privado gratuito. Pagos aceptados: Visa, Mastercard, Cheques Vacaciones.',
@@ -998,7 +998,7 @@ const resources = {
                 directions: {
                     title: 'Anfahrt',
                     car: 'Mit dem Auto: Über die A75 (Ausfahrt 44/47), ca. 30 Min.',
-                    train: 'Bahnhof: Millau (25 km)',
+                    train: 'Bahnhof: Millau (30 km)',
                     plane: 'Flughafen: Montpellier oder Rodez'
                 },
                 parking: 'Kostenloser Parkplatz vor Ort. Zahlungsmittel: Visa, Mastercard, Urlaubsschecks.',

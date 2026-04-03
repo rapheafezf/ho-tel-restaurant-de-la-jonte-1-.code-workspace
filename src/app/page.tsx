@@ -72,11 +72,11 @@ export default function Home() {
                         {[
                             {
                                 type: 'standard',
-                                image: 'https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/s094131847179d8bd/image/i85fa10438ae911c2/version/1650376519/image.jpg'
+                                image: 'https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/s094131847179d8bd/image/idd8f0fe43c8f816d/version/1650376519/image.jpg'
                             },
                             {
                                 type: 'superior',
-                                image: 'https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/s094131847179d8bd/image/idd8f0fe43c8f816d/version/1650376519/image.jpg'
+                                image: 'https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/s094131847179d8bd/image/i85fa10438ae911c2/version/1650376519/image.jpg'
                             },
                             {
                                 type: 'family',

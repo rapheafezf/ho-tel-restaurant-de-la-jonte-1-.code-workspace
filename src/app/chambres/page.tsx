@@ -21,8 +21,8 @@ export default function Rooms() {
             desc: t('rooms_page.types.river.desc'),
             features: t('rooms_page.types.river.features'),
             images: [
-                'https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/s094131847179d8bd/image/idd8f0fe43c8f816d/version/1650376519/image.jpg',
-                'https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/s094131847179d8bd/image/id7ee0e9484ce2523/version/1650376519/image.jpg'
+                'https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/s094131847179d8bd/image/i85fa10438ae911c2/version/1650376519/image.jpg',
+                'https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/s094131847179d8bd/image/idd8f0fe43c8f816d/version/1650376519/image.jpg'
             ]
         },
         {
@@ -32,8 +32,8 @@ export default function Rooms() {
             desc: t('rooms_page.types.standard.desc'),
             features: t('rooms_page.types.standard.features'),
             images: [
-                'https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/s094131847179d8bd/image/i85fa10438ae911c2/version/1650376519/image.jpg',
-                'https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/s094131847179d8bd/image/idd8f0fe43c8f816d/version/1650376519/image.jpg'
+                'https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/s094131847179d8bd/image/idd8f0fe43c8f816d/version/1650376519/image.jpg',
+                'https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/s094131847179d8bd/image/id7ee0e9484ce2523/version/1650376519/image.jpg'
             ]
         },
         {
