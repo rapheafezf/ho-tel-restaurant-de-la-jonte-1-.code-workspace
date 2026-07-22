@@ -12,27 +12,32 @@ export default function Surroundings() {
         {
             id: 'hiking',
             icon: Compass,
-            img: 'https://image.jimcdn.com/cdn-cgi/image/width=2048,height=2048,fit=contain,format=jpg/app/cms/storage/image/path/s094131847179d8bd/image/ia7583ada3acd2e54/version/1679995217/image.jpg'
+            img: '/images/environs/hiking.jpg',
+            mapsQuery: 'Gorges+de+la+Jonte'
         },
         {
             id: 'vultures',
             icon: Bird,
-            img: 'https://image.jimcdn.com/cdn-cgi/image/width=2048,height=2048,fit=contain,format=jpg/app/cms/storage/image/path/s094131847179d8bd/image/i3bc4382610212473/version/1680007077/image.jpg'
+            img: '/images/environs/vultures.jpg',
+            mapsQuery: 'Maison+des+vautours'
         },
         {
             id: 'caves',
             icon: Mountain,
-            img: 'https://image.jimcdn.com/cdn-cgi/image/width=656,height=10000,fit=contain,format=jpg/app/cms/storage/image/path/s094131847179d8bd/image/i988df0ec8b6f7623/version/1680004091/image.jpg'
+            img: '/images/environs/caves.jpg',
+            mapsQuery: 'Aven+Armand'
         },
         {
             id: 'villages',
             icon: Map,
-            img: 'https://image.jimcdn.com/cdn-cgi/image/width=656,height=10000,fit=contain,format=jpg/app/cms/storage/image/path/s094131847179d8bd/image/i46cda60786be5c02/version/1680004688/image.jpg'
+            img: '/images/environs/villages.jpg',
+            mapsQuery: 'Meyrueis'
         },
         {
             id: 'sports',
             icon: Activity,
-            img: 'https://image.jimcdn.com/cdn-cgi/image/width=2048,height=2048,fit=contain,format=jpg/app/cms/storage/image/path/s094131847179d8bd/image/ia7583ada3acd2e54/version/1679995217/image.jpg'
+            img: '/images/environs/sports.jpg',
+            mapsQuery: 'Gorges+du+Tarn'
         }
     ];
 
@@ -81,10 +86,18 @@ export default function Surroundings() {
                                         <p className="text-forest-900/70 mb-6 font-light leading-relaxed">
                                             {t(`surroundings_page.activities.${activity.id}.desc`)}
                                         </p>
-                                        <div className="flex items-center text-gold-500 text-sm font-medium">
+                                        <div className="flex items-center text-gold-500 text-sm font-medium mb-4">
                                             <MapPin className="w-4 h-4 mr-2" />
                                             {t('surroundings_page.distance_label')}{t(`surroundings_page.activities.${activity.id}.dist`)}
                                         </div>
+                                        <a 
+                                            href={`https://www.google.com/maps/dir/?api=1&destination=${activity.mapsQuery}`}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-gold-500/10 hover:bg-gold-500/20 text-gold-600 rounded-xl text-sm font-bold uppercase tracking-wider transition-all duration-300 w-full border border-gold-500/20"
+                                        >
+                                            Y aller
+                                        </a>
                                     </div>
                                 </motion.div>
                             );

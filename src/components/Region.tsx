@@ -10,28 +10,28 @@ export default function Region() {
       title: t('region.activities.gorges.title'),
       description: t('region.activities.gorges.desc'),
       icon: Mountain,
-      image: 'https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/s094131847179d8bd/image/i661acc03d6d46e1e/version/1679996777/image.jpg',
+      image: '/images/region/gorges.jpg',
       mapsQuery: 'Gorges+de+la+Jonte',
     },
     {
       title: t('region.activities.vultures.title'),
       description: t('region.activities.vultures.desc'),
       icon: Bird,
-      image: 'https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/s094131847179d8bd/image/i4ac411dd86090bcf/version/1679996778/image.jpg',
+      image: '/images/region/vautours.jpg',
       mapsQuery: 'Maison+des+vautours',
     },
     {
       title: t('region.activities.viaduct.title'),
       description: t('region.activities.viaduct.desc'),
       icon: Camera,
-      image: 'https://image.jimcdn.com/app/cms/image/transf/dimension=1920x410:format=jpg/path/s01f6e2b109b0b431e/image/i4ac411dd86090bcf/version/1679996778/image.jpg',
+      image: '/images/region/viaduc.jpg',
       mapsQuery: 'Viaduc+de+Millau',
     },
     {
       title: t('region.activities.causse.title'),
       description: t('region.activities.causse.desc'),
       icon: Map,
-      image: 'https://u.jimcdn.com/cms/o/s1f6e2b109b0b431e/img/i37a9f7e411da7038/1432130097/std/image.jpg',
+      image: '/images/region/causse.jpg',
       mapsQuery: 'Causse+Mejean',
     },
   ];
@@ -83,7 +83,7 @@ export default function Region() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 mt-4 px-4 py-2 bg-gold-500/20 hover:bg-gold-500/40 border border-gold-500/30 text-xs font-bold uppercase tracking-wider text-gold-200 hover:text-white rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 delay-200 backdrop-blur-sm w-fit"
                     >
-                      M'y diriger
+                      Y aller
                     </a>
                   </div>
                 </div>
