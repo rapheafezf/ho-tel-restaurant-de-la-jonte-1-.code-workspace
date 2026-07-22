@@ -17,6 +17,7 @@ export default function Hero() {
           alt="Gorges de la Jonte Panorama"
           fill
           priority
+          quality={60}
           sizes="100vw"
           className="object-cover scale-105"
         />
