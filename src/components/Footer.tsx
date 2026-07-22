@@ -2,6 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Facebook } from 'lucide-react';
 
 export default function Footer() {
@@ -14,18 +15,20 @@ export default function Footer() {
 
           {/* Brand & Bio */}
           <div className="lg:col-span-1">
-            <Link href="/" className="block mb-8 w-40 h-20 transition-transform duration-300 hover:scale-105">
-              <img
+            <Link href="/" className="block mb-8 w-40 h-20 transition-transform duration-300 hover:scale-105 relative">
+              <Image
                 src="/images/logo.png"
                 alt="Hôtel Restaurant de la Jonte Logo"
-                className="w-full h-full object-contain brightness-0 invert"
+                fill
+                sizes="(max-width: 768px) 160px, 160px"
+                className="object-contain brightness-0 invert"
               />
             </Link>
             <p className="text-sm leading-relaxed mb-6 font-light">
               {t('footer.bio')}
             </p>
             <div className="flex space-x-4">
-              <a href="https://www.facebook.com/hotelrestaurantlesdouzes" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-gold-500 hover:text-white hover:border-gold-500 transition-colors">
+              <a href="https://www.facebook.com/hotelrestaurantlesdouzes" target="_blank" rel="noopener noreferrer" aria-label="Visiter notre page Facebook" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-gold-500 hover:text-white hover:border-gold-500 transition-colors">
                 <Facebook className="w-4 h-4" />
               </a>
             </div>

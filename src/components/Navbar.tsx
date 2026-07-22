@@ -99,6 +99,7 @@ export default function Navbar() {
             {/* Language Selector */}
             <div className="relative">
               <button
+                aria-label="Toggle language"
                 onClick={() => setIsLangOpen(!isLangOpen)}
                 className={`p-2 rounded-full flex items-center space-x-2 transition-all duration-300 group ${isScrolled || !isTransparentPage
                   ? 'text-forest-950/60 hover:bg-forest-950/5'
@@ -140,6 +141,7 @@ export default function Navbar() {
           <div className="md:hidden flex items-center space-x-2">
             <div className="relative">
               <button
+                aria-label="Toggle language mobile"
                 onClick={() => setIsLangOpen(!isLangOpen)}
                 className={`p-2 flex items-center space-x-1 transition-all duration-300 ${isScrolled || !isTransparentPage
                   ? 'text-forest-950'
@@ -176,6 +178,7 @@ export default function Navbar() {
             </div>
 
             <button
+              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={`p-2 transition-colors duration-300 ${isScrolled || !isTransparentPage ? 'text-forest-950' : 'text-white'}`}
             >
