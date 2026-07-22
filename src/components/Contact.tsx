@@ -98,7 +98,7 @@ export default function Contact() {
             className="h-full min-h-[500px] rounded-[48px] overflow-hidden border border-forest-900/5 shadow-2xl"
           >
             <iframe
-              src="https://maps.google.com/maps?q=44.207199547601434,3.2981159967607123&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              src="https://www.google.com/maps?q=44.207199547601434,3.2981159967607123&hl=fr&z=14&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0, filter: 'grayscale(100%) contrast(1.1) brightness(0.9) invert(0)' }}
