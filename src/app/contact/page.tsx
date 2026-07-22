@@ -101,7 +101,7 @@ export default function Contact() {
 
                         <section className="h-[400px] bg-beige-200 rounded-3xl overflow-hidden shadow-sm border border-beige-200 relative group">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1417.8016462719665!2d3.2681559445173163!3d44.187836371752424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDExJzE2LjEiTiAzwrAxNicwNy4zIkU!5e1!3m2!1sfr!2sfr!4v1741341490264!5m2!1sfr!2sfr"
+                                src="https://maps.google.com/maps?q=44.207199547601434,3.2981159967607123&t=&z=15&ie=UTF8&iwloc=&output=embed"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0 }}

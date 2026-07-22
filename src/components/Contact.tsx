@@ -98,7 +98,7 @@ export default function Contact() {
             className="h-full min-h-[500px] rounded-[48px] overflow-hidden border border-forest-900/5 shadow-2xl"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2859.900483863481!2d3.295927315522789!3d44.20701497910609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b3a0b3b3b3b3b3%3A0x12b3a0b3b3b3b3b3!2sLes%20Douzes%2C%2048150%20Hures-la-Parade!5e0!3m2!1sfr!2sfr!4v1650000000000!5m2!1sfr!2sfr"
+              src="https://maps.google.com/maps?q=44.207199547601434,3.2981159967607123&t=&z=15&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0, filter: 'grayscale(100%) contrast(1.1) brightness(0.9) invert(0)' }}
