@@ -10,9 +10,9 @@ export default function Restaurant() {
     const { t } = useTranslation();
 
     const specialties = [
-        { id: 'aligot', image: 'https://image.jimcdn.com/cdn-cgi/image/width=1024,height=2048,fit=contain,format=jpg/app/cms/storage/image/path/s094131847179d8bd/image/if2d810fff414b826/version/1585560665/image.jpg' },
-        { id: 'confit', image: 'https://image.jimcdn.com/app/cms/image/transf/dimension=2048x1024:format=jpg:rotate=90/path/s094131847179d8bd/image/ic7734a75bd2c93e3/version/1585560665/image.jpg' },
-        { id: 'charcuterie', image: 'https://image.jimcdn.com/cdn-cgi/image/width=656,height=10000,fit=contain,format=jpg/app/cms/storage/image/path/s094131847179d8bd/image/i4a3a8fceb42abbfa/version/1747124616/image.jpg' }
+        { id: 'aligot', image: '/images/restaurant/aligot.jpg' },
+        { id: 'confit', image: '/images/restaurant/confit.jpg' },
+        { id: 'charcuterie', image: '/images/restaurant/charcuterie.jpg' }
     ];
 
     const galleryImages = [
@@ -25,7 +25,7 @@ export default function Restaurant() {
     return (
         <>
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-                <img src="https://image.jimcdn.com/cdn-cgi/image/width=2048,height=2048,fit=contain,format=jpg/app/cms/storage/image/path/s094131847179d8bd/image/if19a7491a0f0dd6a/version/1679995217/image.jpg" alt="Restaurant Terrace" className="absolute inset-0 w-full h-full object-cover" />
+                <img src="/images/restaurant/header.jpg" alt="Restaurant Terrace" className="absolute inset-0 w-full h-full object-cover blur-[2px] scale-105" />
                 <div className="absolute inset-0 bg-forest-950/60" />
                 <div className="relative z-10 text-center px-4">
                     <span className="text-gold-400 font-bold tracking-[0.2em] uppercase text-sm mb-4 block">{t('restaurant_page.gastronomy_badge')}</span>
