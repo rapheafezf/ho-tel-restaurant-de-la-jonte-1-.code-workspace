@@ -101,7 +101,7 @@ export default function Contact() {
 
                         <section className="h-[400px] bg-beige-200 rounded-3xl overflow-hidden shadow-sm border border-beige-200 relative group">
                             <iframe
-                                src="https://www.google.com/maps?q=44.207199547601434,3.2981159967607123&hl=fr&z=14&output=embed"
+                                src="https://www.google.com/maps?q=Hotel+Restaurant+de+la+Jonte,+Les+Douzes&hl=fr&z=17&output=embed"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0 }}
