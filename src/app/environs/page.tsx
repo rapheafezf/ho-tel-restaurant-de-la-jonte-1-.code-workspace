@@ -44,7 +44,7 @@ export default function Surroundings() {
     return (
         <>
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-                <img src="https://image.jimcdn.com/cdn-cgi/image//app/cms/storage/image/path/s094131847179d8bd/image/if78263a65b8da59c/version/1585511025/image.jpg" alt="Jonte Gorges" className="absolute inset-0 w-full h-full object-cover" />
+                <img src="/images/environs/hiking.jpg" alt="Jonte Gorges" className="absolute inset-0 w-full h-full object-cover blur-[2px] scale-105" />
                 <div className="absolute inset-0 bg-forest-950/40 mix-blend-multiply" />
                 <div className="relative z-10 text-center px-4">
                     <span className="text-gold-400 font-bold tracking-[0.2em] uppercase text-sm mb-4 block">{t('surroundings_page.discovery_badge')}</span>
@@ -86,18 +86,10 @@ export default function Surroundings() {
                                         <p className="text-forest-900/70 mb-6 font-light leading-relaxed">
                                             {t(`surroundings_page.activities.${activity.id}.desc`)}
                                         </p>
-                                        <div className="flex items-center text-gold-500 text-sm font-medium mb-4">
+                                        <div className="flex items-center text-gold-500 text-sm font-medium">
                                             <MapPin className="w-4 h-4 mr-2" />
                                             {t('surroundings_page.distance_label')}{t(`surroundings_page.activities.${activity.id}.dist`)}
                                         </div>
-                                        <a 
-                                            href={`https://www.google.com/maps/dir/?api=1&destination=${activity.mapsQuery}`}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-gold-500/10 hover:bg-gold-500/20 text-gold-600 rounded-xl text-sm font-bold uppercase tracking-wider transition-all duration-300 w-full border border-gold-500/20"
-                                        >
-                                            Y aller
-                                        </a>
                                     </div>
                                 </motion.div>
                             );
