@@ -4,6 +4,7 @@ import Hero from '../components/Hero';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import '../i18n';
 
 export default function Home() {
@@ -35,8 +36,8 @@ export default function Home() {
                                 {t('nav.hotel')}
                             </Link>
                         </div>
-                        <div className="order-1 md:order-2">
-                            <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=2048x2048:format=jpg/path/s094131847179d8bd/image/ia174abe91727c5d4/version/1679995217/image.jpg" alt="Hotel Terrace" className="rounded-2xl shadow-xl w-full h-[500px] object-cover" />
+                        <div className="order-1 md:order-2 relative h-[500px] w-full">
+                            <Image src="/images/hotel/gallery1.jpg" alt="Hotel Terrace" fill sizes="(max-width: 768px) 100vw, 50vw" className="rounded-2xl shadow-xl object-cover" />
                         </div>
                     </div>
                 </div>
@@ -85,7 +86,7 @@ export default function Home() {
                         ].map(({ type, image }) => (
                             <div key={type} className="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition-colors">
                                 <div className="h-64 overflow-hidden relative">
-                                    <img src={image} alt={type} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                                    <Image src={image} alt={type} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover group-hover:scale-110 transition-transform duration-700" />
                                 </div>
                                 <div className="p-8 text-center">
                                     <h3 className="text-2xl font-display mb-4 text-gold-50">{t(`home.rooms_preview.${type}.name`)}</h3>
@@ -108,8 +109,8 @@ export default function Home() {
             <section className="py-24 bg-beige-50">
                 <div className="container mx-auto px-4 max-w-6xl">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
-                        <div className="relative">
-                            <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=2048x2048:format=jpg/path/s094131847179d8bd/image/if19a7491a0f0dd6a/version/1679995217/image.jpg" alt="Restaurant Dish" className="rounded-2xl shadow-xl w-full h-[600px] object-cover" />
+                        <div className="relative h-[600px] w-full">
+                            <Image src="/images/hotel/gallery5.jpg" alt="Restaurant Dish" fill sizes="(max-width: 768px) 100vw, 50vw" className="rounded-2xl shadow-xl object-cover" />
                             <div className="absolute -bottom-8 -right-8 bg-gold-500 p-8 rounded-2xl hidden lg:block text-white font-display text-4xl italic shadow-2xl">
                                 {t('home.restaurant_teaser.floating_label')}
                             </div>
@@ -137,17 +138,17 @@ export default function Home() {
                     </p>
 
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
-                        <div className="col-span-2 row-span-2 overflow-hidden rounded-2xl h-[400px]">
-                            <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=2048x2048:format=jpg/path/s094131847179d8bd/image/ic00cc26d293fc2f2/version/1679995217/image.jpg" alt="Mountain" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                        <div className="col-span-2 row-span-2 overflow-hidden rounded-2xl h-[400px] relative">
+                            <Image src="/images/region/causse.jpg" alt="Mountain" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover hover:scale-105 transition-transform duration-700" />
                         </div>
-                        <div className="overflow-hidden rounded-2xl h-[192px]">
-                            <img src="https://image.jimcdn.com/cdn-cgi/image/width=2048,height=2048,fit=contain,format=jpg/app/cms/storage/image/path/s094131847179d8bd/image/i3bc4382610212473/version/1680007077/image.jpg" alt="Canyon" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                        <div className="overflow-hidden rounded-2xl h-[192px] relative">
+                            <Image src="/images/region/gorges.jpg" alt="Canyon" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover hover:scale-105 transition-transform duration-700" />
                         </div>
-                        <div className="overflow-hidden rounded-2xl h-[192px]">
-                            <img src="https://image.jimcdn.com/cdn-cgi/image/width=656,height=10000,fit=contain,format=jpg/app/cms/storage/image/path/s094131847179d8bd/image/i988df0ec8b6f7623/version/1680004091/image.jpg" alt="Lake" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                        <div className="overflow-hidden rounded-2xl h-[192px] relative">
+                            <Image src="/images/region/viaduc.jpg" alt="Lake" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover hover:scale-105 transition-transform duration-700" />
                         </div>
-                        <div className="col-span-2 overflow-hidden rounded-2xl h-[192px]">
-                            <img src="https://image.jimcdn.com/cdn-cgi/image/width=656,height=10000,fit=contain,format=jpg/app/cms/storage/image/path/s094131847179d8bd/image/i46cda60786be5c02/version/1680004688/image.jpg" alt="Forest" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                        <div className="col-span-2 overflow-hidden rounded-2xl h-[192px] relative">
+                            <Image src="/images/region/vautours.jpg" alt="Forest" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover hover:scale-105 transition-transform duration-700" />
                         </div>
                     </div>
 

@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Hero() {
   const { t } = useTranslation();
@@ -11,10 +12,13 @@ export default function Hero() {
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0 bg-forest-900">
-        <img
+        <Image
           src="https://image.jimcdn.com/app/cms/image/transf/dimension=2560x1440:format=jpg/path/s094131847179d8bd/image/if78263a65b8da59c/version/1585511025/image.jpg"
           alt="Gorges de la Jonte Panorama"
-          className="w-full h-full object-cover scale-105"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover scale-105"
         />
         <div className="absolute inset-0 bg-forest-950/40 mix-blend-multiply" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-beige-100" />
