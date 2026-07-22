@@ -17,12 +17,12 @@ export default function Hotel() {
     ];
 
     const galleryImages = [
-        "https://image.jimcdn.com/cdn-cgi/image/width=2048,height=2048,fit=contain,format=jpg/app/cms/storage/image/path/s094131847179d8bd/image/i7bf4b91abed70eab/version/1679995217/image.jpg",
-        "https://image.jimcdn.com/app/cms/image/transf/dimension=2048x1024:format=jpg:rotate=90/path/s094131847179d8bd/image/ic7734a75bd2c93e3/version/1585560665/image.jpg",
-        "https://image.jimcdn.com/cdn-cgi/image/width=2048,height=2048,fit=contain,format=jpg/app/cms/storage/image/path/s094131847179d8bd/image/if19a7491a0f0dd6a/version/1679995217/image.jpg",
-        "https://image.jimcdn.com/app/cms/image/transf/dimension=2048x2048:format=jpg/path/s094131847179d8bd/image/ic81f396ff7af40c1/version/1650376519/image.jpg",
-        "https://image.jimcdn.com/cdn-cgi/image/width=1920,height=400,fit=contain,format=jpg/app/cms/storage/image/path/s094131847179d8bd/image/ia8a47c7bf9e3fd57/version/1650376519/image.jpg",
-        "https://image.jimcdn.com/cdn-cgi/image/width=2048,height=2048,fit=contain,format=jpg/app/cms/storage/image/path/s094131847179d8bd/image/ia174abe91727c5d4/version/1679995217/image.jpg"
+        "/images/hotel/gallery1.jpg",
+        "/images/hotel/gallery2.jpg",
+        "/images/hotel/gallery3.jpg",
+        "/images/hotel/gallery4.jpg",
+        "/images/hotel/gallery5.jpg",
+        "/images/hotel/gallery6.jpg"
     ];
 
     return (
@@ -77,7 +77,7 @@ export default function Hotel() {
                             </p>
                         </div>
                         <div className="relative">
-                            <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=2048x2048:format=jpg/path/s094131847179d8bd/image/ic81f396ff7af40c1/version/1650376519/image.jpg" alt="Swimming Pool" className="rounded-2xl shadow-2xl" />
+                            <img src="/images/hotel/pool.jpg" alt="Swimming Pool" className="rounded-2xl shadow-2xl w-full h-[500px] object-cover" />
                         </div>
                     </div>
                 </div>
