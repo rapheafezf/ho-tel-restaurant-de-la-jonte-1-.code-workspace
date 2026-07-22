@@ -28,7 +28,7 @@ export default function Hotel() {
     return (
         <>
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-                <img src="https://image.jimcdn.com/cdn-cgi/image/width=2048,height=2048,fit=contain,format=jpg/app/cms/storage/image/path/s094131847179d8bd/image/i7bf4b91abed70eab/version/1679995217/image.jpg" alt="Hotel Interior" className="absolute inset-0 w-full h-full object-cover" />
+                <img src="/images/hotel/header.jpg" alt="Hotel Exterior" className="absolute inset-0 w-full h-full object-cover blur-[2px] scale-105" />
                 <div className="absolute inset-0 bg-forest-950/50 mix-blend-multiply" />
                 <div className="relative z-10 text-center px-4">
                     <span className="text-gold-400 font-bold tracking-[0.2em] uppercase text-sm mb-4 block">{t('about.badge')}</span>
