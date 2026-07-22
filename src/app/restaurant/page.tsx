@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Clock, Info, UtensilsCrossed } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import '../../i18n';
 
 export default function Restaurant() {
@@ -25,7 +26,7 @@ export default function Restaurant() {
     return (
         <>
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-                <img src="/images/restaurant/header.jpg" alt="Restaurant Terrace" className="absolute inset-0 w-full h-full object-cover blur-[2px] scale-105" />
+                <Image src="/images/restaurant/header.jpg" alt="Restaurant Terrace" fill sizes="100vw" priority className="object-cover blur-[2px] scale-105" />
                 <div className="absolute inset-0 bg-forest-950/60" />
                 <div className="relative z-10 text-center px-4">
                     <span className="text-gold-400 font-bold tracking-[0.2em] uppercase text-sm mb-4 block">{t('restaurant_page.gastronomy_badge')}</span>
@@ -52,8 +53,8 @@ export default function Restaurant() {
                     <div className="grid md:grid-cols-3 gap-12">
                         {specialties.map((item) => (
                             <div key={item.id} className="group">
-                                <div className="h-64 rounded-2xl overflow-hidden mb-6">
-                                    <img src={item.image} alt={t(`restaurant_page.specialties.${item.id}.name`)} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                <div className="relative h-64 rounded-2xl overflow-hidden mb-6">
+                                    <Image src={item.image} alt={t(`restaurant_page.specialties.${item.id}.name`)} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
                                 </div>
                                 <h3 className="text-2xl font-display text-forest-950 mb-3">{t(`restaurant_page.specialties.${item.id}.name`)}</h3>
                                 <p className="text-forest-900/70">{t(`restaurant_page.specialties.${item.id}.desc`)}</p>
@@ -96,8 +97,8 @@ export default function Restaurant() {
                 <div className="container mx-auto px-4 max-w-6xl">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                         {galleryImages.map((src, idx) => (
-                            <div key={idx} className={`overflow-hidden rounded-xl ${idx === 0 || idx === 3 ? 'col-span-2 row-span-2 h-[400px]' : 'h-48'}`}>
-                                <img src={src} alt={`Restaurant image ${idx + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700 cursor-pointer" />
+                            <div key={idx} className={`relative overflow-hidden rounded-xl w-full ${idx === 0 || idx === 3 ? 'col-span-2 row-span-2 h-[400px]' : 'h-48'}`}>
+                                <Image src={src} alt={`Restaurant image ${idx + 1}`} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover hover:scale-105 transition-transform duration-700 cursor-pointer" />
                             </div>
                         ))}
                     </div>

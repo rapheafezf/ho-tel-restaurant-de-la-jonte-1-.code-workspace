@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Camera, CheckCircle2 } from 'lucide-react';
+import Image from 'next/image';
 import '../../i18n';
 
 export default function Hotel() {
@@ -28,7 +29,7 @@ export default function Hotel() {
     return (
         <>
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-                <img src="/images/hotel/header.jpg" alt="Hotel Exterior" className="absolute inset-0 w-full h-full object-cover blur-[2px] scale-105" />
+                <Image src="/images/hotel/header.jpg" alt="Hotel Exterior" fill sizes="100vw" priority className="object-cover blur-[2px] scale-105" />
                 <div className="absolute inset-0 bg-forest-950/50 mix-blend-multiply" />
                 <div className="relative z-10 text-center px-4">
                     <span className="text-gold-400 font-bold tracking-[0.2em] uppercase text-sm mb-4 block">{t('about.badge')}</span>
@@ -76,8 +77,8 @@ export default function Hotel() {
                                 {t('hotel_page.pool_area.text')}
                             </p>
                         </div>
-                        <div className="relative">
-                            <img src="/images/hotel/pool.jpg" alt="Swimming Pool" className="rounded-2xl shadow-2xl w-full h-[500px] object-cover" />
+                        <div className="relative h-[500px] w-full">
+                            <Image src="/images/hotel/pool.jpg" alt="Swimming Pool" fill sizes="(max-width: 768px) 100vw, 50vw" className="rounded-2xl shadow-2xl object-cover" />
                         </div>
                     </div>
                 </div>
@@ -107,8 +108,8 @@ export default function Hotel() {
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                         {galleryImages.map((src, idx) => (
-                            <div key={idx} className="overflow-hidden rounded-xl h-64">
-                                <img src={src} alt={`Gallery image ${idx + 1}`} className="w-full h-full object-cover hover:scale-110 transition-transform duration-700 cursor-pointer" />
+                            <div key={idx} className="relative overflow-hidden rounded-xl h-64 w-full">
+                                <Image src={src} alt={`Gallery image ${idx + 1}`} fill sizes="(max-width: 768px) 50vw, 33vw" className="object-cover hover:scale-110 transition-transform duration-700 cursor-pointer" />
                             </div>
                         ))}
                     </div>

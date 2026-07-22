@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 import '../i18n';
 
 export default function Navbar() {
@@ -59,12 +60,14 @@ export default function Navbar() {
           <div className="flex-shrink-0 flex-1">
             <Link
               href="/"
-              className="flex items-center justify-center h-16 w-32 md:h-20 md:w-40 transition-transform duration-300 hover:scale-105"
+              className="flex items-center justify-center h-16 w-32 md:h-20 md:w-40 transition-transform duration-300 hover:scale-105 relative"
             >
-              <img
+              <Image
                 src="/images/logo.png"
                 alt="Hôtel Restaurant de la Jonte Logo"
-                className={`w-full h-full object-contain transition-[filter] duration-300 ${isScrolled || !isTransparentPage ? 'brightness-100 invert-0' : 'brightness-0 invert'
+                fill
+                sizes="(max-width: 768px) 128px, 160px"
+                className={`object-contain transition-[filter] duration-300 ${isScrolled || !isTransparentPage ? 'brightness-100 invert-0' : 'brightness-0 invert'
                   }`}
               />
             </Link>
