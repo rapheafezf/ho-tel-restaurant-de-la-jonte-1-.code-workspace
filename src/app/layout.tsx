@@ -9,13 +9,18 @@ export const metadata: Metadata = {
     description: "Authenticité et Nature au cœur des Gorges de la Jonte",
 };
 
+import { Inter, Outfit } from 'next/font/google';
+
+const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
+const outfit = Outfit({ subsets: ['latin'], variable: '--font-display' });
+
 export default function RootLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="fr">
+        <html lang="fr" className={`${inter.variable} ${outfit.variable}`}>
             <body className="antialiased">
                 <Navbar />
                 <main>{children}</main>
