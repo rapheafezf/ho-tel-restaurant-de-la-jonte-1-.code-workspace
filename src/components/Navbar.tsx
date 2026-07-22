@@ -66,6 +66,7 @@ export default function Navbar() {
                 src="/images/logo.png"
                 alt="Hôtel Restaurant de la Jonte Logo"
                 fill
+                priority
                 sizes="(max-width: 768px) 128px, 160px"
                 className={`object-contain transition-[filter] duration-300 ${isScrolled || !isTransparentPage ? 'brightness-100 invert-0' : 'brightness-0 invert'
                   }`}

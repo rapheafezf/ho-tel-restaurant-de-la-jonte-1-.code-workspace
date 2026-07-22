@@ -21,6 +21,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="fr" className={`${inter.variable} ${outfit.variable}`}>
+            <head>
+                <link rel="preconnect" href="https://image.jimcdn.com" />
+            </head>
             <body className="antialiased">
                 <Navbar />
                 <main>{children}</main>
