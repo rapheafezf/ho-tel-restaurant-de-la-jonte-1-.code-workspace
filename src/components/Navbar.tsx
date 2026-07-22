@@ -1,0 +1,222 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import { Menu, X, Globe, ChevronDown } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import '../i18n';
+
+export default function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isLangOpen, setIsLangOpen] = useState(false);
+  const { t, i18n } = useTranslation();
+  const pathname = usePathname();
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+    setIsLangOpen(false);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navLinks = [
+    { name: t('nav.home'), href: '/' },
+    { name: t('nav.hotel'), href: '/hotel' },
+    { name: t('nav.rooms'), href: '/chambres' },
+    { name: t('nav.restaurant'), href: '/restaurant' },
+    { name: t('nav.region'), href: '/environs' },
+    { name: t('nav.offers'), href: '/offres' },
+    { name: t('nav.contact'), href: '/contact' },
+  ];
+
+  const languages = [
+    { code: 'fr', name: '🇫🇷 Français' },
+    { code: 'en', name: '🇬🇧 English' },
+    { code: 'es', name: '🇪🇸 Español' },
+    { code: 'de', name: '🇩🇪 Deutsch' },
+  ];
+
+  const isTransparentPage = pathname === '/' || pathname === '/chambres';
+
+  return (
+    <nav
+      className={`fixed w-full z-50 transition-[padding,background-color,border-color,box-shadow,backdrop-filter] duration-500 ${isScrolled
+        ? 'bg-beige-50/90 backdrop-blur-xl shadow-sm py-3'
+        : isTransparentPage ? 'bg-transparent py-8' : 'bg-beige-100 py-3 shadow-sm'
+        }`}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center">
+          <div className="flex-shrink-0 flex-1">
+            <Link
+              href="/"
+              className="flex items-center justify-center h-16 w-32 md:h-20 md:w-40 transition-transform duration-300 hover:scale-105"
+            >
+              <img
+                src="/images/logo.png"
+                alt="Hôtel Restaurant de la Jonte Logo"
+                className={`w-full h-full object-contain transition-[filter] duration-300 ${isScrolled || !isTransparentPage ? 'brightness-100 invert-0' : 'brightness-0 invert'
+                  }`}
+              />
+            </Link>
+          </div>
+
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center space-x-10">
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={`text-[11px] font-bold tracking-[0.2em] uppercase transition-all duration-300 ${isActive ? 'text-gold-500' : (isScrolled || !isTransparentPage ? 'text-forest-900/60 hover:text-forest-900' : 'text-white/70 hover:text-white')
+                    }`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
+
+            <Link
+              href="/contact"
+              className="btn-primary py-3 px-6 text-[10px] whitespace-nowrap flex-shrink-0"
+            >
+              {t('nav.reserve')}
+            </Link>
+
+            {/* Language Selector */}
+            <div className="relative">
+              <button
+                onClick={() => setIsLangOpen(!isLangOpen)}
+                className={`p-2 rounded-full flex items-center space-x-2 transition-all duration-300 group ${isScrolled || !isTransparentPage
+                  ? 'text-forest-950/60 hover:bg-forest-950/5'
+                  : 'text-white/60 hover:bg-white/10'
+                  }`}
+              >
+                <Globe size={16} />
+                <span className="text-[10px] uppercase font-bold tracking-tighter">{i18n.language.substring(0, 2)}</span>
+                <ChevronDown size={12} className={`transition-transform duration-300 ${isLangOpen ? 'rotate-180' : ''}`} />
+              </button>
+
+              <AnimatePresence>
+                {isLangOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                    className="absolute right-0 mt-4 w-48 bg-white shadow-2xl rounded-2xl border border-beige-200 py-3 overflow-hidden"
+                  >
+                    {languages.map((lang) => (
+                      <button
+                        key={lang.code}
+                        onClick={() => changeLanguage(lang.code)}
+                        className={`w-full text-left px-5 py-3 text-xs tracking-wider transition-colors ${i18n.language === lang.code
+                          ? 'text-gold-500 font-bold bg-beige-100'
+                          : 'text-forest-950/70 hover:bg-beige-50'
+                          }`}
+                      >
+                        {lang.name}
+                      </button>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          </div>
+
+          {/* Mobile Menu Button & Language */}
+          <div className="md:hidden flex items-center space-x-2">
+            <div className="relative">
+              <button
+                onClick={() => setIsLangOpen(!isLangOpen)}
+                className={`p-2 flex items-center space-x-1 transition-all duration-300 ${isScrolled || !isTransparentPage
+                  ? 'text-forest-950'
+                  : 'text-white'
+                  }`}
+              >
+                <Globe size={18} />
+                <span className="text-xs uppercase font-bold">{i18n.language ? i18n.language.substring(0, 2) : 'FR'}</span>
+              </button>
+
+              <AnimatePresence>
+                {isLangOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                    className="absolute right-0 mt-4 w-40 bg-white shadow-2xl rounded-2xl border border-beige-200 py-2 overflow-hidden"
+                  >
+                    {languages.map((lang) => (
+                      <button
+                        key={lang.code}
+                        onClick={() => changeLanguage(lang.code)}
+                        className={`w-full text-left px-4 py-2 text-xs tracking-wider transition-colors ${i18n.language === lang.code
+                          ? 'text-gold-500 font-bold bg-beige-100'
+                          : 'text-forest-950/70 hover:bg-beige-50'
+                          }`}
+                      >
+                        {lang.name}
+                      </button>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className={`p-2 transition-colors duration-300 ${isScrolled || !isTransparentPage ? 'text-forest-950' : 'text-white'}`}
+            >
+              {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden absolute top-full left-0 w-full max-h-[calc(100vh-80px)] overflow-y-auto bg-beige-50 shadow-2xl py-8 px-8 flex flex-col space-y-6"
+          >
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`text-forest-950 text-2xl font-display tracking-tight border-b border-forest-950/5 pb-4 ${isActive ? 'text-gold-500' : ''}`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
+
+
+
+            <Link
+              href="/contact"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="btn-primary text-center py-6"
+            >
+              {t('nav.reserve')}
+            </Link>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </nav>
+  );
+}
